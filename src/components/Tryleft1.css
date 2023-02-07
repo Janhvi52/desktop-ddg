@@ -1,0 +1,29 @@
+.header-next>h5{
+    color: gray;
+}
+.message{
+    margin-top: 1.2%;
+    border: 1px solid rgb(0, 174, 255);
+    background: rgb(0, 174, 255);
+    width: 480px;
+    height: 100px;
+    color: white;
+    margin-left: 30%;
+    padding: 1%;
+    border-radius: 11px;
+}
+.message span{
+    color:  rgb(0, 174, 255);
+    font-weight: 500;
+    padding-left: 70%;
+}
+@media screen and (max-width:600px) {
+    .message{
+        margin-left: 7%;
+        width: 380px;
+    height: 100px;
+    }
+    .message span{
+        padding-left: 60%;
+    }
+}

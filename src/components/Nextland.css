@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Fjalla+One&family=Outfit&family=Permanent+Marker&family=Roboto:wght@100;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+span{
+    color: maroon;
+}
+h4{
+    padding-top: 1.4%;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+body{
+    background: url('./texturepaper.jpg');
+}
+.n2{
+    text-align: center;
+    line-height: 280%;
+transform: rotate(-8deg);
+}
+i{
+    color: rgb(16, 132, 179);
+    font-family: 'Permanent Marker', cursive;
+}
+h1{
+    color: maroon;
+    font-family: 'Fjalla One', sans-serif;
+    font-size:50px ;
+}
+.n4{
+    display: flex;
+}
+
+.n6{
+    padding-top: 2%;
+position: absolute;
+left: 60%;
+}
+h5{
+    font-size: 18px;
+    font-weight: 700;
+}
+.n1{
+    width: 100%;
+    height: 100vh;
+    line-height: 200%;
+}
+form button{
+    background-color: maroon;
+    color: white;
+    padding: 4% 16%;
+    border-radius: 11px;
+    border:2px solid black;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+h1>h6{
+    font-weight: 200;
+    font-size: small;
+    font-style: italic;
+}
+h1>h6>i{
+    color: black;
+}
+.n3{
+    text-align: center;
+}
+.nmid>h3{
+    text-align: center;
+}
+input{
+    padding: 4%;
+    border-radius: 8px;
+    border:2px solid rgb(90, 178, 236);
+}
+.n6{
+    text-align: center;
+
+}
+label{
+    color: rgb(170, 12, 12);
+}
+/* .nmid>button{
+    padding: 1.5% 5%;
+    background-color: rgb(35, 116, 209);
+    color: white;
+    border:2px solid white;
+    font-size: 15px;
+}
+.nmid{
+    text-align: center;
+} */
+
+.b{
+    padding-top: 3%;
+}
+.b input{
+    padding: 4% 10%;
+}
+#second{
+    display: none;
+}
+input[type="checkbox"]{
+   outline: 1px solid black;
+}
+.n6{
+    padding-right: 5%;
+}
+.n5>img{
+    padding-left: 0%;
+}

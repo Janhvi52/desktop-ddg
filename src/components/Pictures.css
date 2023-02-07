@@ -1,0 +1,15 @@
+img{
+    position: relative;
+}
+.board .text-under-image{
+    color:rgb(221, 204, 204);
+    position: absolute;
+    top: 25%;
+    left: 14.9%;
+    font-size: 60%;
+    /* line-height: 180%; */
+}
+h1{
+    color: rgb(221, 204, 204);
+    font-size: 200%;
+}

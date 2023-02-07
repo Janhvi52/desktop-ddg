@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header-top{
+    text-align: center;
+}
+.next{
+    color: white;
+    margin-top: 8%;
+    background-color:rgb(143, 20, 20);
+    display: flex;
+    justify-content: space-around;
+  
+    line-height: 155%;
+ 
+}
+.right{
+    padding-top: 1%;
+}
+.right button{
+    padding: 1.5% 4%;
+    background-color: wheat;
+color: black;
+font-size: 18px;   
+}
+#mid{
+    padding: 1%;
+}
+@media screen and (max-width:500px) {
+    .right{
+        padding: 2%;
+        text-align: center;
+       
+    }
+    .next{
+        width: 600px;
+        height: 500px;
+    }
+}
