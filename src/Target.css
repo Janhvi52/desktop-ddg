@@ -4,22 +4,15 @@ position: relative;
 .text-under-image{
     position: absolute;
     color: gray;
-    top: 39%;
-    left: 18.5%;
+    top: 40%;
+    left: 16%;
     font-size: 12px;
 }
 @media screen and (max-width:1200px) {
     .text-under-image{
         top: 29%;
-        left: 38.5%;
-        font-size: 10px;
-    }
-}
-@media screen and (max-width:100px) {
-    .text-under-image{
-        top: 32%;
-        left: 36%;
-        font-size: 12px;
+        left: 34%;
+        font-size: 9px;
     }
 }
 

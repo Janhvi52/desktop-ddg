@@ -34,10 +34,7 @@ body{
   margin: auto;
 }
 
-/* @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
+
 .header{
   font-family: 'Chakra Petch', sans-serif;
   font-size: 1.2rem;
@@ -47,19 +44,6 @@ body{
   margin-top: 10px;
 }
 
-
-/* 
-.item {
-  padding: 10px;
-  margin-bottom: 20px;
-} */
-
-
-/* .target {
-  width: 50%;
-  min-height: 200px;
-  border: 1px solid grey;
-} */
 .head-image{
   position: relative;
   
