@@ -1,9 +1,10 @@
 import React from 'react';
 import './Landing.css';
 
+
 const Landing = () => {
   return (
-    
+  
     <div className='mainn'>
         <h4>BLENDED WITH <span> AMERICAN BOURBON</span> WHISKEY</h4>
      

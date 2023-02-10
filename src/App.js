@@ -7,21 +7,34 @@ import header from "./components/bgheader.png";
 import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
 
-const del=[];
+const del = [];
 class App extends Component {
-  check = () => {
-    alert("oo")
-    var attempts = 0;
-    if (this.data.id=== this.del.id)
-      window.location.href = "./lose";
-    else attempts--;
-  };
   data = [
     { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
     { id: 2, name: "Whisky", url: "/images/bgwhiskey.png" },
     { id: 4, url: "/images/bgsoda.png" },
     { id: 6, name: "Garnishes", url: "/images/lemon.png" },
   ];
+  check = () => {
+    console.log(del[0]);
+    if (
+      this.data[0].id == del[0] &&
+      this.data[1].id == del[1] &&
+      this.data[2].id == del[2] &&
+      this.data[3].id == del[3]
+    ) {
+      localStorage.setItem("attempts", 0);
+      window.location.href = "./lose";
+    } else {
+      localStorage.setItem("attempts", 3);
+      var totalAttempts = localStorage.getItem("attempts");
+      localStorage.setItem("attempts", totalAttempts - 1);
+      var remainingAttempts = localStorage.getItem("attempts");
+      console.log(remainingAttempts);
+      window.location.href = `./try${remainingAttempts}left`;
+    }
+  };
+
   state = {
     items: [
       { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
@@ -31,16 +44,14 @@ class App extends Component {
       { id: 5, url: "images/bgorange.png" },
       { id: 6, name: "Garnishes", url: "/images/lemon.png" },
     ],
-   
   };
- 
+
   deleteItem = (id) => {
     this.setState((prevState) => {
-     
       del.push(id);
       console.log(del);
       return {
-               items: prevState.items.filter((item) => item.id !== id),
+        items: prevState.items.filter((item) => item.id !== id),
       };
     });
   };
