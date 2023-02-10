@@ -7,13 +7,12 @@ import header from "./components/bgheader.png";
 import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
 
+const del=[];
 class App extends Component {
   check = () => {
+    alert("oo")
     var attempts = 0;
-    if (
-      this.data.length === this.state.items.length &&
-      this.data.id === this.state.items.id
-    )
+    if (this.data.id=== this.del.id)
       window.location.href = "./lose";
     else attempts--;
   };
@@ -32,12 +31,16 @@ class App extends Component {
       { id: 5, url: "images/bgorange.png" },
       { id: 6, name: "Garnishes", url: "/images/lemon.png" },
     ],
+   
   };
-
+ 
   deleteItem = (id) => {
     this.setState((prevState) => {
+     
+      del.push(id);
+      console.log(del);
       return {
-        items: prevState.items.filter((item) => item.id !== id),
+               items: prevState.items.filter((item) => item.id !== id),
       };
     });
   };
