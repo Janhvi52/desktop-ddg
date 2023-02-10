@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { Route, Routes } from "react-router-dom";
+import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Nextland from './components/Nextland'
@@ -9,9 +10,9 @@ import Try2left from "./components/Try2left";
 import Landing from "./components/Landing";
 import Win from "./components/Win";
 import Lose from "./components/Lose";
-import { Route, Routes } from "react-router-dom";
 
-ReactDOM.render(
+
+createRoot(document.getElementById('root')).render(
     <BrowserRouter>
  
     <Routes>
@@ -25,5 +26,5 @@ ReactDOM.render(
         </Routes>
    
   </BrowserRouter>
-  , document.getElementById('root'));
+ );
 

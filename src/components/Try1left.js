@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Tryleft1.css";
-
 export default class Try1left extends Component {
   render() {
     return (
@@ -32,14 +31,14 @@ export default class Try1left extends Component {
           <h5>Opps 😟 Something went wrong!</h5>
           <div className="message">
             <h4>
-              Great! You have 2 more attempts to win yourself a complementary RC
+              Oh! This is your last attempt to win yourself a complementary RC
               American Pride Highball
             </h4>
             <br />
             <span>
               Please try again{" "}
               <a href="/App">
-                <i class="fa-sharp fa-solid fa-rotate-right"></i>
+                <i className="fa-sharp fa-solid fa-rotate-right"></i>
               </a>
             </span>
           </div>

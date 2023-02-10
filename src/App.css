@@ -55,7 +55,10 @@ justify-items:center;
 .rule{
   color: gray;
 }
-
+.item-container>button{
+  bottom: 0;
+  position: sticky;
+}
 @media screen and (max-width:600px) {
   .header{
    font-size: 17px;
