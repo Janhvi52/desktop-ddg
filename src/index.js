@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Nextland from './components/Nextland'
-import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter} from "react-router-dom"
 import Try1left from "./components/Try1left";
 import Try2left from "./components/Try2left";
 import Landing from "./components/Landing";
 import Win from "./components/Win";
 import Lose from "./components/Lose";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
     <BrowserRouter>
@@ -27,4 +26,4 @@ ReactDOM.render(
    
   </BrowserRouter>
   , document.getElementById('root'));
-registerServiceWorker();
+

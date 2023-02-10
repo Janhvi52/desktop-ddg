@@ -57,9 +57,6 @@ body {
 .board{
   padding-top: 1.5%;
   color: rgb(221, 204, 204);
-  /* width: 300px;
-  height: 500px;
-  border: 2px solid black; */
 }
 .header{
   font-family: 'Chakra Petch', sans-serif;

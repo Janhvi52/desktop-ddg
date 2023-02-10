@@ -6,15 +6,10 @@
   box-sizing: border-box;
 }
 body{
-  background: url(texturepaper.jpg);
+  background: url(./components/texturepaper.jpg);
 }
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 .first{
@@ -48,20 +43,6 @@ justify-items:center;
 .app-container {
   margin-top: 10px;
 }
-
-
-/* 
-.item {
-  padding: 10px;
-  margin-bottom: 20px;
-} */
-
-
-/* .target {
-  width: 50%;
-  min-height: 200px;
-  border: 1px solid grey;
-} */
 .head-image{
   position: relative;
   
@@ -74,6 +55,7 @@ justify-items:center;
 .rule{
   color: gray;
 }
+
 @media screen and (max-width:600px) {
   .header{
    font-size: 17px;
