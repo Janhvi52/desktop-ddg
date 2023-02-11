@@ -1,38 +1,48 @@
 /* eslint-disable*/
-import React, { Component } from "react";
+import React, {Component, useState} from "react";
 import "./App.css";
 import Item from "./Item";
 import Target from "./Target";
 import header from "./components/bgheader.png";
 import TouchBackend from "react-dnd-touch-backend";
-import { DragDropContext } from "react-dnd";
+import {DragDropContext} from "react-dnd";
 
 const del = [];
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      image: "images/bglass.png",
+      items: [
+        {id: 1, name: "Ice Cubes", url: "/images/icecube.png"},
+        {id: 2, name: "Whisky", url: "/images/bgwhiskey.png"},
+        {id: 3, name: "Mixers", url: "/images/bgcola.png"},
+        {id: 4, url: "/images/bgsoda.png"},
+        {id: 5, url: "images/bgorange.png"},
+        {id: 6, name: "Garnishes", url: "/images/lemon.png"},
+      ],
+    };
+  }
   data = [
-    { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
-    { id: 2, name: "Whisky", url: "/images/bgwhiskey.png" },
-    { id: 4, url: "/images/bgsoda.png" },
-    { id: 6, name: "Garnishes", url: "/images/lemon.png" },
+    {id: 1, name: "Ice Cubes", url: "/images/icecube.png"},
+    {id: 2, name: "Whisky", url: "/images/bgwhiskey.png"},
+    {id: 4, url: "/images/bgsoda.png"},
+    {id: 6, name: "Garnishes", url: "/images/lemon.png"},
   ];
   componentDidMount() {
+    this.setState({image: "images/bglass.png"});
     if (!localStorage.getItem("isKeySet")) {
       localStorage.setItem("attempts", 3);
       localStorage.setItem("isKeySet", "true");
     }
   }
   check = () => {
-    // console.log(this.data[0].id)
-    // console.log(this.data[1].id);
-    // console.log(this.data[2].id);
-    // console.log(this.data[3].id);
-
     var combo =
       del.includes(this.data[0].id) &&
       del.includes(this.data[1].id) &&
       del.includes(this.data[2].id) &&
       del.includes(this.data[3].id);
-    console.log(combo);
+
     if (del.length === 4 && combo) {
       localStorage.setItem("attempts", 0);
       window.location.href = "./lose";
@@ -40,23 +50,10 @@ class App extends Component {
       var totalAttempts = localStorage.getItem("attempts");
       localStorage.setItem("attempts", totalAttempts - 1);
       var remainingAttempts = localStorage.getItem("attempts");
-      console.log(remainingAttempts);
-
       if (remainingAttempts > 0) {
         window.location.href = `./try${remainingAttempts}left`;
       } else window.location.href = `./win`;
     }
-  };
-
-  state = {
-    items: [
-      { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
-      { id: 2, name: "Whisky", url: "/images/bgwhiskey.png" },
-      { id: 3, name: "Mixers", url: "/images/bgcola.png" },
-      { id: 4, url: "/images/bgsoda.png" },
-      { id: 5, url: "images/bgorange.png" },
-      { id: 6, name: "Garnishes", url: "/images/lemon.png" },
-    ],
   };
 
   deleteItem = (id) => {
@@ -76,7 +73,7 @@ class App extends Component {
           <div className="head-image">
             <img
               src={header}
-              style={{ display: "inline", width: "100vw", height: "100px" }}
+              style={{display: "inline", width: "100vw", height: "100px"}}
             ></img>
           </div>
           <div className="text">
@@ -96,16 +93,19 @@ class App extends Component {
         </div>
 
         <div className="first">
-          <Target />
+          <Target image={this.state.image} />
 
           <div className="App-intro">
             <div className="app-container">
               <div className="item-container">
-                {this.state.items.map((item, index) => (
+                {this.state.items?.map((item, index) => (
                   <Item
                     key={item.id}
                     item={item}
-                    handleDrop={(id) => this.deleteItem(id)}
+                    handleDrop={(id) => {
+                      this.deleteItem(id);
+                      this.componentDidMount();
+                    }}
                   />
                 ))}
                 <button onClick={this.check}>Shake</button>
@@ -118,4 +118,4 @@ class App extends Component {
   }
 }
 
-export default DragDropContext(TouchBackend({ enableMouseEvents: true }))(App);
+export default DragDropContext(TouchBackend({enableMouseEvents: true}))(App);
