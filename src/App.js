@@ -16,15 +16,16 @@ class App extends Component {
     { id: 6, name: "Garnishes", url: "/images/lemon.png" },
   ];
   componentDidMount() {
-    if (!localStorage.getItem('isKeySet')) {
-      localStorage.setItem('attempts', 3);
-      localStorage.setItem('isKeySet', 'true');
+    if (!localStorage.getItem("isKeySet")) {
+      localStorage.setItem("attempts", 3);
+      localStorage.setItem("isKeySet", "true");
     }
   }
   check = () => {
     console.log(del[0]);
-    var combo=del.includes(this.data[0].id && this.data[1].id &&
-      this.data[2].id && this.data[3].id)
+    var combo = del.includes(
+      this.data[0].id && this.data[1].id && this.data[2].id && this.data[3].id
+    );
     if (
       this.data[0].id == del[0] &&
       this.data[1].id == del[1] &&
@@ -33,24 +34,18 @@ class App extends Component {
     ) {
       localStorage.setItem("attempts", 0);
       window.location.href = "./lose";
-    } 
-      else if(combo){
-      localStorage.setItem("attempts", 0);
+    } else if (combo) {
       window.location.href = "./lose";
-    }
-    else {
+    } else {
       var totalAttempts = localStorage.getItem("attempts");
       localStorage.setItem("attempts", totalAttempts - 1);
       var remainingAttempts = localStorage.getItem("attempts");
       console.log(remainingAttempts);
-      if(remainingAttempts>0){
+      if (remainingAttempts > 0) {
         window.location.href = `./try${remainingAttempts}left`;
+      } else window.location.href = `./win`;
     }
-    else
-    window.location.href=`./win`;
-      }
-          }
- 
+  };
 
   state = {
     items: [
@@ -74,7 +69,7 @@ class App extends Component {
   };
 
   render() {
-       return (
+    return (
       <div className="App">
         <header className="header">
           <div className="head-image">
