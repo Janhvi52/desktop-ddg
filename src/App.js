@@ -22,25 +22,26 @@ class App extends Component {
     }
   }
   check = () => {
-    console.log(del[0]);
-    var combo = del.includes(
-      this.data[0].id && this.data[1].id && this.data[2].id && this.data[3].id
-    );
-    if (
-      this.data[0].id == del[0] &&
-      this.data[1].id == del[1] &&
-      this.data[2].id == del[2] &&
-      this.data[3].id == del[3]
-    ) {
+    // console.log(this.data[0].id)
+    // console.log(this.data[1].id);
+    // console.log(this.data[2].id);
+    // console.log(this.data[3].id);
+
+    var combo =
+      del.includes(this.data[0].id) &&
+      del.includes(this.data[1].id) &&
+      del.includes(this.data[2].id) &&
+      del.includes(this.data[3].id);
+    console.log(combo);
+    if (del.length === 4 && combo) {
       localStorage.setItem("attempts", 0);
-      window.location.href = "./lose";
-    } else if (combo) {
       window.location.href = "./lose";
     } else {
       var totalAttempts = localStorage.getItem("attempts");
       localStorage.setItem("attempts", totalAttempts - 1);
       var remainingAttempts = localStorage.getItem("attempts");
       console.log(remainingAttempts);
+
       if (remainingAttempts > 0) {
         window.location.href = `./try${remainingAttempts}left`;
       } else window.location.href = `./win`;
