@@ -20,7 +20,7 @@ const Landing = () => {
         </div>
         <div className='image-text'>
             <div className='image-sec'>
-            <img src='images/landing1.png' alt='oops!' width={"128%"} height="392px"></img>
+            <img className='image-view' src='images/landing1.png' alt='oops!'></img>
             </div>
             <div className='text-sec'>
                <a href='./Nextland'><button>ENTER</button></a>
