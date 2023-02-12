@@ -41,11 +41,11 @@ const images = {
   145: "images/image146.png",
   146: "images/image145.png",
   156: "images/image156.png",
-  234:"images/image234.png",
-  235:"images/image235.png",
-  236:"images/image236.png",
-  245:"images/image235.png",
-  246:"images/image236.png",
+  234: "images/image234.png",
+  235: "images/image235.png",
+  236: "images/image236.png",
+  245: "images/image235.png",
+  246: "images/image236.png",
   256: "images/image256.png",
   345: "images/image345.png",
   346: "images/image346.png",
@@ -53,12 +53,12 @@ const images = {
   456: "images/image456.png",
   1234: "images/image124.png",
   1235: "images/image1235.png",
-  1236:"images/image1236.png",
+  1236: "images/image1236.png",
   1245: "images/image1235.png",
   1246: "images/image1236.png",
-  1256:"images/image1356.png",
-  1345:"images/image1235.png",
-  1346:"images/image1236.png",
+  1256: "images/image1356.png",
+  1345: "images/image1235.png",
+  1346: "images/image1236.png",
   1356: "images/image1356.png",
   1456: "images/image1256.png",
   2345: "images/image2345.png",
@@ -68,11 +68,11 @@ const images = {
   3456: "images/image2356.png",
 
   12346: "images/image1246.png",
-  12356:"images/image1256.png",
-  12456:"images/image1256.png",
-  13456:"images/image1256.png",
-  23456:"images/image2356.png",
-    123456: "images/image123456.png",
+  12356: "images/image1256.png",
+  12456: "images/image1256.png",
+  13456: "images/image1256.png",
+  23456: "images/image2356.png",
+  123456: "images/image123456.png",
 };
 
 class App extends Component {
@@ -98,28 +98,23 @@ class App extends Component {
   ];
 
   componentDidMount() {
-    if(del.length>0){
-    const number = parseInt(del.sort().join(""));
-    console.log(number);
-    if (images[number]) {
-      this.setState({ image: images[number] });
-    } 
-    else{
-      this.setState({ image: "images/image123456.png" });
+    if (del.length > 0) {
+      const number = parseInt(del.sort().join(""));
+      console.log(number);
+      if (images[number]) {
+        this.setState({ image: images[number] });
+      } else {
+        this.setState({ image: "images/image123456.png" });
+      }
+      console.log(number);
+      if (!localStorage.getItem("isKeySet")) {
+        localStorage.setItem("attempts", 3);
+        localStorage.setItem("isKeySet", "true");
+      }
+    } else {
+      this.setState({ image: "images/bglass.png" });
     }
-   
-
-    console.log(number);
-    if (!localStorage.getItem("isKeySet")) {
-      localStorage.setItem("attempts", 3);
-      localStorage.setItem("isKeySet", "true");
-    }
   }
-  else{
-    this.setState({ image: "images/bglass.png" });
-  }
-  }
-
 
   check = () => {
     var combo =
