@@ -36,7 +36,7 @@ h1{
 }
 .image-sec{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     position: relative;
 }
 .text-sec{

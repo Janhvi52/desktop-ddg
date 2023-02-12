@@ -31,12 +31,12 @@ body {
 }
 .pictures4{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex: 1;
 }
 .pictures3{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex: 1;
 }
 .wrap2{
@@ -46,12 +46,12 @@ body {
 
 .pictures6{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex: 1;
 }
 .pictures5{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex: 1;
 }
 .board{
