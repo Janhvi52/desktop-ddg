@@ -21,40 +21,57 @@ const images = {
   14: "images/image14.png",
   15: "images/image16.png",
   16: "images/image15.png",
+  23: "images/image23.png",
+  24: "images/image24.png",
   25: "images/image26.png",
   26: "images/image25.png",
-  23: "images/image23.png",
   34: "images/image23.png",
-  24: "images/image24.png",
   35: "images/image36.png",
   36: "images/image35.png",
   45: "images/image46.png",
   46: "images/image45.png",
   56: "images/image56.png",
+  123: "images/image123.png",
   125: "images/image126.png",
-  124: "images/image124.png",
+  124: "images/image123.png",
   126: "images/image125.png",
+  134: "images/image123.png",
   135: "images/image136.png",
   136: "images/image135.png",
-  145: "images/image145.png",
-  146: "images/image146.png",
+  145: "images/image146.png",
+  146: "images/image145.png",
   156: "images/image156.png",
+  234: "images/image234.png",
+  235: "images/image235.png",
+  236: "images/image236.png",
+  245: "images/image235.png",
+  246: "images/image236.png",
   256: "images/image256.png",
   345: "images/image345.png",
   346: "images/image346.png",
   356: "images/image356.png",
-  1456: "images/image1256.png",
-  1356: "images/image1356.png",
-  1256: "images/image1256.png",
-  1456: "images/image1456.png",
-  456: "images/image1456.png",
-  1246: "images/image1246.png",
-  1235: "images/image1235.png",
-  1245: "images/image12451.png",
-  123: "images/image123.png",
-  134: "images/image123.png",
+  456: "images/image456.png",
   1234: "images/image124.png",
-  12345: "images/image1245.png",
+  1235: "images/image1235.png",
+  1236: "images/image1236.png",
+  1245: "images/image1235.png",
+  1246: "images/image1236.png",
+  1256: "images/image1356.png",
+  1345: "images/image1235.png",
+  1346: "images/image1236.png",
+  1356: "images/image1356.png",
+  1456: "images/image1256.png",
+  2345: "images/image2345.png",
+  2346: "images/image2346.png",
+  2356: "images/image2356.png",
+  2456: "images/image2356.png",
+  3456: "images/image2356.png",
+
+  12346: "images/image1246.png",
+  12356: "images/image1256.png",
+  12456: "images/image1256.png",
+  13456: "images/image1256.png",
+  23456: "images/image2356.png",
   123456: "images/image123456.png",
 };
 
@@ -81,20 +98,24 @@ class App extends Component {
   ];
 
   componentDidMount() {
-    const number = parseInt(del.sort().join(""));
-    console.log(number);
-    if (images[number]) {
-      this.setState({ image: images[number] });
-    } else if (images[!number]) {
+    if (del.length > 0) {
+      const number = parseInt(del.sort().join(""));
+      console.log(number);
+      if (images[number]) {
+        this.setState({ image: images[number] });
+      } else {
+        this.setState({ image: "images/image123456.png" });
+      }
+      console.log(number);
+      if (!localStorage.getItem("isKeySet")) {
+        localStorage.setItem("attempts", 3);
+        localStorage.setItem("isKeySet", "true");
+      }
+    } else {
       this.setState({ image: "images/bglass.png" });
     }
-
-    console.log(number);
-    if (!localStorage.getItem("isKeySet")) {
-      localStorage.setItem("attempts", 3);
-      localStorage.setItem("isKeySet", "true");
-    }
   }
+
   check = () => {
     var combo =
       del.includes(this.data[0].id) &&
