@@ -15,7 +15,7 @@ class Target extends Component {
     const {connectDropTarget, image} = this.props;
     return connectDropTarget(
       <div className="target">
-        <img src={image} style={{display: "inline", width: "110%"}}></img>
+        <img src={image} alt="oops"style={{display: "inline", width: "110%"}}></img>
 
         <div className="text-under-image">
           <h6> ESTD 1886</h6>

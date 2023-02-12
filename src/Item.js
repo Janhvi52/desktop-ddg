@@ -38,7 +38,7 @@ class Item extends Component {
     return connectDragSource(
       <div className="item" style={{ opacity }}>
         <span>
-          <img src={url} width="65px"></img>
+          <img src={url} alt="" width="65px"></img>
         </span>
         <div className="inside">{name}</div>
       </div>
