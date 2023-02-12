@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { DropTarget } from "react-dnd";
+import React, {Component} from "react";
+import {DropTarget} from "react-dnd";
 import "./Target.css";
 
 function collect(connect, monitor) {
@@ -11,19 +11,11 @@ function collect(connect, monitor) {
 }
 
 class Target extends Component {
-  state = {
-    image: "images/bglass.png",
-  };
-
   render() {
-    const { connectDropTarget } = this.props;
-
+    const {connectDropTarget, image} = this.props;
     return connectDropTarget(
       <div className="target">
-        <img
-          src={this.state.image}
-          style={{ display: "inline", width: "110%" }}
-        ></img>
+        <img src={image} style={{display: "inline", width: "110%"}}></img>
 
         <div className="text-under-image">
           <h6> ESTD 1886</h6>
