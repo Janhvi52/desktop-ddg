@@ -14,7 +14,7 @@ const itemSource = {
       console.log("dragging stopped");
       return;
     }
-        return props.handleDrop(props.item.id);
+    return props.handleDrop(props.item.id);
   },
 };
 
@@ -27,19 +27,12 @@ function collect(connect, monitor) {
 }
 
 class Item extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = JSON.parse(window.localStorage.getItem("state")) || {
-  //     count: 0,
-  //   };
-  // }
-  // setState(state) {
-  //   window.localStorage.setItem("state", JSON.stringify(state));
-  //   super.setState(state);
-  // }
-
   render() {
-    const {isDragging,connectDragSource,item: { url, name }} = this.props;
+    const {
+      isDragging,
+      connectDragSource,
+      item: { url, name },
+    } = this.props;
     const opacity = isDragging ? 0 : 1;
 
     return connectDragSource(
