@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 span {
-  color: maroon;
+  color: #9C102A;
 }
 h4 {
   padding-top: 1.4%;
@@ -13,52 +13,48 @@ h4 {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
-
 body {
   width: 100%;
-  /* overflow: hidden; */
   height: 100vh;
+  overflow: hidden;
   background: url("./texturepaper.jpg") no-repeat;
 }
 .header-top {
   line-height: 280%;
-  transform: rotate(-8deg);
+  transform: rotate(-5deg);
 }
 i{
   color: rgb(16, 132, 179);
   font-family: "Permanent Marker", cursive;
 }
 h1{
-  color: maroon;
+  color: #9C102A;
   font-family: "Fjalla One", sans-serif;
   font-size: 50px;
 }
 .image-text{
-  display: flex;
-  justify-content: center;
-}
-.image-sec{
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-}
-.image-view{
-  bottom: 0;
-}
-.text-sec{
-  padding-top: 5%;
   position: absolute;
+  bottom: 0px;
+}
+.bottom-center{
+  align-self: center;
 }
 h5{
   font-size: 18px;
   font-weight: 700;
 }
 .mainn{
-  line-height: 200%;
+  height: 100vh;
+  overflow: hidden;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.upper-part{
+ align-items: flex-start; 
 }
 button{
-
-  background-color: maroon;
+  background-color: #9C102A;
   color: white;
   padding: 10px 20px;
   border-radius: 11px;
@@ -79,9 +75,12 @@ h1>h6>i{
 .header-next {
   text-align: center;
 }
-@media screen and (max-width: 700px) {
-  .image-sec > img {
-    width: 122%;
-    height: 392px;
+.landingImage{
+  max-height: max-content;
+  height: 160%;
+}
+@media screen and (min-width: 500px){
+  .mainn{
+    align-items: center;
   }
 }
