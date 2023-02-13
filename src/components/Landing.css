@@ -16,7 +16,7 @@ h4 {
 
 body {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100vh;
   background: url("./texturepaper.jpg") no-repeat;
 }
@@ -57,9 +57,10 @@ h5{
   line-height: 200%;
 }
 button{
+
   background-color: maroon;
   color: white;
-  padding: 22% 120%;
+  padding: 10px 20px;
   border-radius: 11px;
   border: 2px solid black;
 }
