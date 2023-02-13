@@ -34,7 +34,7 @@ class Lose extends React.Component {
           </div>
           <div className="next">
             <div className="left">
-              <img src="images/bglassf1.png" alt="oops"></img>
+              <img src="images/bglassf11.png" width="100%" height="45%"alt="oops"></img>
             </div>
             <div className="right">
               <h4>
@@ -54,7 +54,10 @@ class Lose extends React.Component {
               </div>
 
               <h4>
-                A maximun of one complimentary Highball drink per particioant
+              
+            
+                A maximun of one complimentary Highball 
+               drink per particioant
                 can be availed through this offer
               </h4>
             </div>

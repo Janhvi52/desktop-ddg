@@ -66,7 +66,6 @@ const images = {
   2356: "images/image2356.png",
   2456: "images/image2356.png",
   3456: "images/image2356.png",
-
   12346: "images/image1246.png",
   12356: "images/image1256.png",
   12456: "images/image1256.png",
@@ -158,7 +157,7 @@ class App extends Component {
             ></img>
           </div>
           <div className="text">
-            <h3 style={{color: "whitesmoke"}}>
+            <h3 style={{ color: "whitesmoke" }}>
               To complete your Highball
               <br />
               Choose the Right
@@ -174,10 +173,10 @@ class App extends Component {
         </div>
 
         <div className="first">
-        <div className="first-one">
-          <Target image={this.state.image} />
-          <button onClick={this.check}>Shake</button>
-        </div>
+          <div className="first-one">
+            <Target image={this.state.image} />
+            <button onClick={this.check}>Shake</button>
+          </div>
           <div className="App-intro">
             <div className="app-container">
               <div className="item-container">

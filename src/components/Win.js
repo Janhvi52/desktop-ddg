@@ -29,7 +29,10 @@ const Win = () => {
           <br /> BUT DEFINETELY NOT AN
         </h3>
         <br />
+        <div className="ap">
         <h1>AMERICAN PRIDE HIGHBALL</h1>
+        </div>
+        
         <br />
         <a href="/">
           <button>TRY POURING AGAIN</button>
