@@ -13,6 +13,7 @@ h4 {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
+
 body {
   width: 100%;
   overflow: hidden;
@@ -23,55 +24,55 @@ body {
   line-height: 280%;
   transform: rotate(-8deg);
 }
-i {
+i{
   color: rgb(16, 132, 179);
   font-family: "Permanent Marker", cursive;
 }
-h1 {
+h1{
   color: maroon;
   font-family: "Fjalla One", sans-serif;
   font-size: 50px;
 }
-.image-text {
+.image-text{
   display: flex;
   justify-content: center;
 }
-.image-sec {
+.image-sec{
   display: flex;
   justify-content: flex-end;
   position: relative;
 }
-.image-view {
+.image-view{
   bottom: 0;
 }
-.text-sec {
+.text-sec{
   padding-top: 5%;
   position: absolute;
 }
-h5 {
+h5{
   font-size: 18px;
   font-weight: 700;
 }
-.mainn {
+.mainn{
   line-height: 200%;
 }
-button {
+button{
   background-color: maroon;
   color: white;
   padding: 22% 120%;
   border-radius: 11px;
   border: 2px solid black;
 }
-h3 {
+h3{
   font-family: "Roboto", sans-serif;
   font-weight: 600;
 }
-h1 > h6 {
+h1>h6{
   font-weight: 200;
   font-size: small;
   font-style: italic;
 }
-h1 > h6 > i {
+h1>h6>i{
   color: black;
 }
 .header-next {
