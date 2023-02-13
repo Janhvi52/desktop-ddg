@@ -24,12 +24,16 @@ justify-items:center;
   flex-direction: column;
   align-items: flex-end;
 }
+.first-one{
+  display: inline;
+  align-items: start;
+}
 .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
-  
+  align-items: flex-end;
   font-size: large;
   max-width: 800px;
   margin: auto;
@@ -45,7 +49,6 @@ justify-items:center;
 }
 .head-image{
   position: relative;
-  
 }
 .text{
   position: absolute;
@@ -54,10 +57,6 @@ justify-items:center;
 }
 .rule{
   color: gray;
-}
-.item-container>button{
-  bottom: 0;
-  position: sticky;
 }
 @media screen and (max-width:600px) {
   .header{

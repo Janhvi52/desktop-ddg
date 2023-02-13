@@ -34,8 +34,8 @@ class Nextland extends React.Component {
             <img
               src="images/bglassf1.png"
               alt="oops!"
-              width={"100%"}
-              height="352px"
+              width={"85%"}
+              height={"100%"}
             ></img>
           </div>
           <div className="n6">

@@ -158,7 +158,7 @@ class App extends Component {
             ></img>
           </div>
           <div className="text">
-            <h3>
+            <h3 style={{color: "whitesmoke"}}>
               To complete your Highball
               <br />
               Choose the Right
@@ -174,8 +174,10 @@ class App extends Component {
         </div>
 
         <div className="first">
+        <div className="first-one">
           <Target image={this.state.image} />
-
+          <button onClick={this.check}>Shake</button>
+        </div>
           <div className="App-intro">
             <div className="app-container">
               <div className="item-container">
@@ -188,7 +190,6 @@ class App extends Component {
                     }}
                   />
                 ))}
-                <button onClick={this.check}>Shake</button>
               </div>
             </div>
           </div>
