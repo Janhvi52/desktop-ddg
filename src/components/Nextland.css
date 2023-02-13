@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 span {
-  color: maroon;
+  color: #9C102A;
 }
 h4 {
   padding-top: 1.4%;
@@ -26,7 +26,7 @@ i {
   font-family: "Permanent Marker", cursive;
 }
 h1 {
-  color: maroon;
+  color: #9C102A;
   font-family: "Fjalla One", sans-serif;
   font-size: 50px;
 }
@@ -37,7 +37,7 @@ h1 {
 .n6 {
   padding-top: 2%;
   position: absolute;
-  left: 60%;
+  left: 50%;
 }
 h5 {
   font-size: 18px;
@@ -49,7 +49,7 @@ h5 {
   line-height: 200%;
 }
 form button {
-  background-color: maroon;
+  background-color: #9C102A;
   color: white;
   padding: 4% 16%;
   border-radius: 11px;
