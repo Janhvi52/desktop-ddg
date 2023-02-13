@@ -1,81 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Fjalla+One&family=Outfit&family=Permanent+Marker&family=Roboto:wght@100;400&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   }
-span{
-    color: maroon;
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Fjalla+One&family=Outfit&family=Permanent+Marker&family=Roboto:wght@100;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h4{
-    padding-top: 1.4%;
-    font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+span {
+  color: maroon;
+}
+h4 {
+  padding-top: 1.4%;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
   text-align: center;
 }
-body{
-    width: 100%;
-    height: 100vh;
-    background: url('./texturepaper.jpg') no-repeat;
-   }
-.header-top{
-    line-height: 280%;
-transform: rotate(-8deg);
+
+body {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  background: url("./texturepaper.jpg") no-repeat;
+}
+.header-top {
+  line-height: 280%;
+  transform: rotate(-8deg);
 }
 i{
-    color: rgb(16, 132, 179);
-    font-family: 'Permanent Marker', cursive;
+  color: rgb(16, 132, 179);
+  font-family: "Permanent Marker", cursive;
 }
 h1{
-    color: maroon;
-    font-family: 'Fjalla One', sans-serif;
-    font-size:50px ;
+  color: maroon;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 50px;
 }
 .image-text{
-    display: flex;
+  display: flex;
+  justify-content: center;
 }
 .image-sec{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.image-view{
+  bottom: 0;
 }
 .text-sec{
-    padding-top: 5%;
-position: absolute;
-left: 60%;
+  padding-top: 5%;
+  position: absolute;
 }
 h5{
-    font-size: 18px;
-    font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 .mainn{
-    line-height: 200%;
+  line-height: 200%;
 }
 button{
-    background-color: maroon;
-    color: white;
-    padding: 22% 120%;
-    border-radius: 11px;
-    border:2px solid black;
- }
+  background-color: maroon;
+  color: white;
+  padding: 22% 120%;
+  border-radius: 11px;
+  border: 2px solid black;
+}
 h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 h1>h6{
-    font-weight: 200;
-    font-size: small;
-    font-style: italic;
+  font-weight: 200;
+  font-size: small;
+  font-style: italic;
 }
 h1>h6>i{
-    color: black;
+  color: black;
 }
-.header-next{
-    text-align: center;
+.header-next {
+  text-align: center;
 }
-@media screen and (max-width:700px) {
-    .image-sec>img{
-     width: 122%;
-     height: 392px;
-    }
- }
+@media screen and (max-width: 700px) {
+  .image-sec > img {
+    width: 122%;
+    height: 392px;
+  }
+}
