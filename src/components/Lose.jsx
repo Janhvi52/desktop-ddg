@@ -1,4 +1,5 @@
 import React, { Component} from "react";
+import HeaderElement from "./header";
 import "./Win.css";
 
 class Win extends Component {
@@ -10,25 +11,9 @@ render(){
   
   return (
     <div className="mainn">
-      <h4>
-        BLENDED WITH <span> AMERICAN BOURBON</span> WHISKEY
-      </h4>
-      <div className="header-top">
-        <h2>
-          <i>JOIN THE</i>
-        </h2>
-        <h1>
-          AMERICAN
-          <br />
-          PRIDE{" "}
-          <h6>
-            <i>#CHALLENGEACCEPTED</i>
-          </h6>
-        </h1>
-        <br />
-        <br />
-        <br />
-      </div>
+      <HeaderElement/>
+      <br/>
+      <br/>
       <div className="back">
         <h3>
           WELL, THAT COULD HAVE BEEN A DRINK.

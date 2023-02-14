@@ -1,33 +1,17 @@
 import React from "react";
+import HeaderElement from "./header";
 import "./Lose.css";
 
 class Lose extends React.Component {
   handlemath() {
-    document.getElementById("mid").innerHTML = ("" + Math.random()).substring(
-      2,
-      8
-    );
+    document.getElementById("mid").innerHTML = ("" + Math.random()).substring(2,8);
   }
   render() {
     return (
       <>
         <div className="my">
-          <h4>
-            BLENDED WITH <span> AMERICAN BOURBON</span> WHISKEY
-          </h4>
-          <br />
+        <HeaderElement/>
           <div className="header-top">
-            <h2>
-              <i>JOIN THE</i>
-            </h2>
-            <h1>
-              AMERICAN
-              <br />
-              PRIDE{" "}
-              <h6>
-                <i>#CHALLENGEACCEPTED</i>
-              </h6>
-            </h1>
             <h1>
               <i>CONGRATULATIONS</i>
             </h1>
@@ -43,7 +27,9 @@ class Lose extends React.Component {
             </div>
             <div className="right">
               <h4>
-                ON WINNING A COMPLIMENTARY HIGHBALL! SHARE YOUR UNIQUE CODE WITH SERVER &</h4>
+                ON WINNING A COMPLIMENTARY HIGHBALL! SHARE YOUR UNIQUE CODE WITH
+                SERVER &
+              </h4>
               <br />
               <h2>
                 <b>GRAB YOUR FIRST HIGHBALL</b>

@@ -5,8 +5,7 @@
     padding-block: 4rem;
     color: white;
     text-transform: capitalize;
-    padding-bottom: 95%;
-   
+   height: 70vh;
     font-family: 'Chakra Petch', sans-serif;
 }
 .diagonal::after{
@@ -23,7 +22,7 @@
 .message>a>button{
    background-color: white;
    color: #9C102A;
-   padding: 3.5%;
+   padding: 12px;
      font-size: 15px;
      border: 1.8px solid #9C102A;
      box-shadow: 0 0 0 4px #fff, 0 0 0 4px #888;

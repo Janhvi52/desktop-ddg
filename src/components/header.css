@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .header-top {
+    text-align: center;
+  }
+  .header-top>h1>i{
+      font-size: 32px;
+  }
+  
+  .next{
+    position: relative;
+    color: white;
+    margin-top: 20%;
+    background-color: rgb(143, 20, 20);
+    display: flex;
+    line-height: 155%;
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 95%;
+    font-family: 'Chakra Petch', sans-serif;
+  }
+  .next::after{
+    content: '';
+    background-color:rgb(143, 20, 20);
+    position: absolute;
+    inset: 0;
+    transform: skewY(-5deg);
+    z-index: -1;
+  }
+  .right {
+  
+      position: absolute;
+      left: 20%;
+    padding-top: 1%;
+    text-align: right;
+   
+  }
+  .right h4{
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: right;
+  }
+  .right>h2{
+    color: white;
+    line-height: 100%;
+    font-size: 25px;
+  }
+  .right h5{
+    font-family: 'Chakra Petch', sans-serif;
+  }
+  .right button {
+    background-color: white;
+    color: maroon;
+    padding: 3.5% 5%;
+      font-size: 15px;
+      border: 1.8px solid maroon;
+      box-shadow: 0 0 0 4px #fff, 0 0 0 4px #888;
+  }
+  
+  .endd>h6{
+    text-align: left;
+    font-size: 12px;
+  }
+  #mid {
+    padding: 1%;
+  }
+  @media screen and (max-width: 500px) {
+    .right {
+         text-align: center;
+      padding-right: 5%;
+    }
+    .next {
+      width: 380px;
+      height: 540px;
+    }
+  }

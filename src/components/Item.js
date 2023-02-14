@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { DragSource } from "react-dnd";
-import "./App";
+import "../App";
 
 const itemSource = {
   beginDrag(props) {

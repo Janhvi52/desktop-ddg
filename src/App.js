@@ -1,8 +1,8 @@
 /* eslint-disable*/
 import React, { Component} from "react";
 import "./App.css";
-import Item from "./Item";
-import Target from "./Target";
+import Item from "./components/Item";
+import Target from "./components/Target";
 import header from "./assets/headerr.png"
 import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
@@ -157,11 +157,8 @@ class App extends Component {
               src={header}
               style={{ display: "inline", width: "100vw", height: "100%" }}
             ></img>
-          </div>
-         
+          </div>       
         </header>
-        
-
         <div className="first">
           <div className="first-one">
             <Target image={this.state.image} />
