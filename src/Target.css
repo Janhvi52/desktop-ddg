@@ -1,6 +1,4 @@
-.target>img{
-position: relative;
-}
+
 .text-under-image{
     position: absolute;
     color: gray;

@@ -28,9 +28,9 @@ const Landing = () => {
           </h3>
         </div>
       </div>
-              {/* <div className="n4">
+              <div className="n4">
           <div className="n6">
-            <form action="/App">
+            <form action="./App">
               <label>
                 <h4>
                   <b>Please enter your mobile no.</b>
@@ -58,7 +58,7 @@ const Landing = () => {
               </div>
             </form>
           </div>
-        </div> */}
+        </div>
       <div className="image-text">
         <img
           className="landingImage"

@@ -3,7 +3,7 @@ import "./Tryleft1.css";
 export default class Try1left extends Component {
   render() {
     return (
-      <div className="mainn">
+      <div className="main-try">
         <h4>
           BLENDED WITH <span> AMERICAN BOURBON</span> WHISKEY
         </h4>
@@ -28,22 +28,23 @@ export default class Try1left extends Component {
           </h3>
           <br />
           <br />
-          <h5>Opps 😟 Something went wrong!</h5>
-          <div className="message">
+   
+          <div className="diagonal">
+                    <div className="message">
             <h4>
-              Oh! This is your last attempt to win yourself a complementary RC
+              Oh! This is your last attempt to win yourself a RC
               American Pride Highball
             </h4>
             <br />
-            <span>
-              Please try again{" "}
+           
+             <br/>
               <a href="/App">
-                <i className="fa-sharp fa-solid fa-rotate-right"></i>
+                <button><b>TRY POURING AGAIN</b></button>
               </a>
-            </span>
+          
+          </div>
           </div>
         </div>
-        <img src="images/bglassf1.png" alt="oops"></img>
       </div>
     );
   }

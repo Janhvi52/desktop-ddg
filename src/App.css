@@ -1,32 +1,43 @@
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Outfit&display=swap);
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background: url(./components/texturepaper.jpg);
 }
 .App {
   text-align: center;
 }
 
-.first{
-  padding-top: 30px;
+.first {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-justify-items:center;
+  position: relative;
 }
-.item-container{
+.item-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
 }
-.first-one{
-  display: inline;
-  align-items: start;
+.first-one {
+  position: absolute;
+  left: -160px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+.first-one>button{
+  background-color: #9C102A;
+  color:white;
+  padding: 2% 4%;
+    font-size: 15px;
+    border: 1.8px solid #9C102A;
+    box-shadow: 0 0 0 3px #ece7e8, 0 0 0 5px #9C102A;
+    margin: 2%;
 }
 .App-title {
   font-size: 1.5em;
@@ -37,39 +48,52 @@ justify-items:center;
   font-size: large;
   max-width: 800px;
   margin: auto;
+  right: 20px;
+  position: absolute;
 }
 
-.header{
-  font-family: 'Chakra Petch', sans-serif;
+.header {
+  font-family: "Chakra Petch", sans-serif;
   font-size: 1.2rem;
   text-align: center;
 }
 .app-container {
   margin-top: 10px;
 }
-.head-image{
+.head-image {
   position: relative;
 }
-.text{
+.text {
   position: absolute;
   top: 0.5%;
   left: 40%;
 }
-.rule{
+.rule {
   color: gray;
 }
-@media screen and (max-width:600px) {
-  .header{
-   font-size: 17px;
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 17px;
   }
-  .text{
+  .text {
     position: absolute;
     top: 0.5%;
     left: 25%;
   }
-  
-.App-intro{
-  display: flex;
-  justify-content: space-around;
+
+  .App-intro {
+    display: flex;
+    justify-content: space-around;
+  }
 }
+
+.mixers {
+  display: flex;
+}
+.garnish {
+  display: flex;
+}
+.mix {
+  color: black;
+  font-family: "Chakra Petch", sans-serif;
 }

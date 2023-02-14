@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { DragSource } from "react-dnd";
 import "./App";
-import "./Item.css";
 
 const itemSource = {
   beginDrag(props) {
@@ -14,6 +13,7 @@ const itemSource = {
       console.log("dragging stopped");
       return;
     }
+    console.log(props.item.id+" oooookkkkk")
     return props.handleDrop(props.item.id);
   },
 };

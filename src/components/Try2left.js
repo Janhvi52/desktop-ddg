@@ -29,22 +29,25 @@ export default class Try2left extends Component {
           </h3>
           <br />
           <br />
-          <h5>Opps 😟 Something went wrong!</h5>
+          <div className="diagonal">
+          
           <div className="message">
             <h4>
-              Great! You have 2 more attempts to win yourself a complementary RC
+              Great! You have two more attempts to win yourself a complementary RC
               American Pride Highball
             </h4>
             <br />
-            <span>
-              Please try again{" "}
+           
+             <br/>
               <a href="/App">
-                <i className="fa-sharp fa-solid fa-rotate-right"></i>
+                <button><b>TRY POURING AGAIN</b></button>
               </a>
-            </span>
+          
           </div>
+          </div>
+          
         </div>
-        <img src="images/bglassf1.png" alt="oops"></img>
+       
       </div>
     );
   }
