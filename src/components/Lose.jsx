@@ -1,71 +1,35 @@
-import React from "react";
-import "./Lose.css";
+import React, { Component} from "react";
+import HeaderElement from "./header";
+import "./Win.css";
 
-class Lose extends React.Component {
-  handlemath() {
-    document.getElementById("mid").innerHTML = ("" + Math.random()).substring(
-      2,
-      8
-    );
-  }
-  render() {
-    return (
-      <>
-        <div className="my">
-          <h4>
-            BLENDED WITH <span> AMERICAN BOURBON</span> WHISKEY
-          </h4>
-          <br />
-          <div className="header-top">
-            <h2>
-              <i>JOIN THE</i>
-            </h2>
-            <h1>
-              AMERICAN
-              <br />
-              PRIDE{" "}
-              <h6>
-                <i>#CHALLENGEACCEPTED</i>
-              </h6>
-            </h1>
-            <h1>
-              <i>CONGRATULATIONS</i>
-            </h1>
-          </div>
-          <div className="next">
-            <div className="left">
-              <img src="images/bglassf11.png" width="100%" height="45%"alt="oops"></img>
-            </div>
-            <div className="right">
-              <h4>
-                ON WINNING
-                <br />A COMPLIMENTARY HIGHBALL!
-              </h4>
-              <h4>SHARE YOUR UNIQUE CODE WITH SERVER &</h4>
-              <br />
-              <h2>
-                <b>GRAB YOUR FIRST HIGHBALL</b>
-              </h2>
-              <br />
-              <h5>Your Unique Code is</h5>
-
-              <div id="mid">
-                <button onClick={this.handlemath}>Click Here!</button>
-              </div>
-
-              <h4>
-              
-            
-                A maximun of one complimentary Highball 
-               drink per particioant
-                can be availed through this offer
-              </h4>
-            </div>
-          </div>
+class Win extends Component {
+  buttonClick=()=>{
+    localStorage.setItem("attempts",3);
+    window.location.href="./App";
+  };
+render(){
+  
+  return (
+    <div className="lose">
+      <HeaderElement/>
+      <br/>
+      <br/>
+      <div className="back">
+        <h3>
+          WELL, THAT COULD HAVE BEEN A DRINK.
+          <br /> BUT DEFINETELY NOT AN
+        </h3>
+        <br />
+        <div className="ap">
+        <h1>AMERICAN PRIDE HIGHBALL</h1>
         </div>
-      </>
-    );
-  }
-}
+        
+        <br />
+          <button onClick={this.buttonClick}>TRY POURING AGAIN</button>
 
-export default Lose;
+      </div>
+    </div>
+  );
+};
+}
+export default Win;

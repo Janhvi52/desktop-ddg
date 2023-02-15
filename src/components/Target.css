@@ -1,17 +1,15 @@
-.target>img{
-position: relative;
-}
+
 .text-under-image{
     position: absolute;
     color: gray;
-    top: 40%;
-    left: 16%;
-    font-size: 12px;
+    top: 10%;
+    left: 45%;
+    font-size: 9px;
 }
 @media screen and (max-width:1200px) {
     .text-under-image{
-        top: 29%;
-        left: 34%;
+        top: 10%;
+        left: 45%;
         font-size: 9px;
     }
 }

@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body{
-  background: url(texturepaper.jpg);
+  background: url(./assets/texturepaper.jpg);
 }
 .App {
   text-align: center;

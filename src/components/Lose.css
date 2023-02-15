@@ -1,45 +1,48 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
 }
-.header-top {
-  text-align: center;
+.back button{
+    background-color: white;
+    color: #9C102A;
+    padding: 12px;
+    border-radius: 8px;
+      font-size: 15px;
+      border: 1px solid #9C102A;
+      box-shadow: 0 0 0 2px #fff
 }
-.header-top>h1>i{
-    font-size: 37px;
-}
-.next {
+.back{
+    
+    padding: 6%;
+    padding-bottom: 63%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 200%;
     position: relative;
-  color: white;
-  margin-top: 20%;
-  background-color: rgb(143, 20, 20);
-  display: flex;
-  line-height: 155%;
+    isolation: isolate;
+    padding-block: 3rem;
+    margin-block: 3%;
+    color: white;
+    text-transform: capitalize;
+    height: 35%;
+    font-family: 'Chakra Petch', sans-serif;
+
 }
-.right {
+.back::after{
+    content: '';
+    background-color: #9C102A;
     position: absolute;
-    left: 27%;
-  padding-top: 1%;
+    inset: 0;
+    transform: skewY(-7deg);
+    z-index: -1;
 }
+.back>h1{
+    color: white;
+}
+.mainn{
 
-.right button {
-  padding: 1.5% 4%;
-  background-color: wheat;
-  color: black;
-  font-size: 18px;
 }
-
-#mid {
-  padding: 1%;
-}
-@media screen and (max-width: 500px) {
-  .right {
-    padding: 2%;
-    text-align: center;
-  }
-  .next {
-    width: 450px;
-    height: 540px;
-  }
+.ap>h1{
+color: white;
+line-height: 100%;
 }

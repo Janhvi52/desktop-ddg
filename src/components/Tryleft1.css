@@ -1,29 +1,35 @@
-.header-next>h5{
-    color: gray;
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Fjalla+One&family=Outfit&family=Permanent+Marker&family=Roboto:wght@100;400&display=swap");
+.diagonal{
+    position: relative;
+    isolation: isolate;
+    padding-block: 3rem;
+    margin-block: 3%;
+    color: white;
+    text-transform: capitalize;
+    height: 35%;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.diagonal::after{
+    content: '';
+    background-color: #9C102A;
+    position: absolute;
+    inset: 0;
+    transform: skewY(-7deg);
+    z-index: -1;
 }
 .message{
-    margin-top: 1.2%;
-    border: 1px solid rgb(0, 174, 255);
-    background: rgb(0, 174, 255);
-    width: 480px;
-    height: 100px;
     color: white;
-    margin-left: 30%;
-    padding: 1%;
-    border-radius: 11px;
 }
-.message span{
-    color:  rgb(0, 174, 255);
-    font-weight: 500;
-    padding-left: 70%;
+.message>a>button{
+   background-color: white;
+   color: #9C102A;
+   padding: 12px;
+   border-radius: 8px;
+     font-size: 15px;
+     border: 1px solid #9C102A;
+     box-shadow: 0 0 0 2px #fff
 }
-@media screen and (max-width:600px) {
-    .message{
-        margin-left: 7%;
-        width: 380px;
-    height: 100px;
-    }
-    .message span{
-        padding-left: 60%;
-    }
+.message>h4{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
 }

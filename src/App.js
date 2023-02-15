@@ -1,9 +1,9 @@
 /* eslint-disable*/
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import "./App.css";
-import Item from "./Item";
-import Target from "./Target";
-import header from "./components/bgheader.png";
+import Item from "./components/Item";
+import Target from "./components/Target";
+import header from "./assets/headerr.png"
 import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
 
@@ -66,6 +66,7 @@ const images = {
   2356: "images/image2356.png",
   2456: "images/image2356.png",
   3456: "images/image2356.png",
+  12345:"images/image1245.png",
   12346: "images/image1246.png",
   12356: "images/image1256.png",
   12456: "images/image1256.png",
@@ -78,14 +79,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: "images/bglass.png",
+      image: "images/glass.png",
       items: [
         { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
         { id: 2, name: "Whisky", url: "/images/bgwhiskey.png" },
-        { id: 3, name: "Mixers", url: "/images/bgcola.png" },
-        { id: 4, url: "/images/bgsoda.png" },
+        { id: 3, url: "/images/bgcola.png" },
+        { id: 4,name: "Mixers", url: "/images/bgsoda.png" },
         { id: 5, url: "images/bgorange.png" },
-        { id: 6, name: "Garnishes", url: "/images/lemon.png" },
+        { id: 6,  name: "Garnishes",url: "/images/lemon.png" },
       ],
     };
   }
@@ -111,7 +112,7 @@ class App extends Component {
         localStorage.setItem("isKeySet", "true");
       }
     } else {
-      this.setState({ image: "images/bglass.png" });
+      this.setState({ image: "images/glass.png" });
     }
   }
 
@@ -122,16 +123,17 @@ class App extends Component {
       del.includes(this.data[2].id) &&
       del.includes(this.data[3].id);
 
-    if (del.length === 4 && combo) {
+      var attemptt = localStorage.getItem("attempts");
+    if (del.length === 4 && combo && attemptt>0) {
       localStorage.setItem("attempts", 0);
-      window.location.href = "./lose";
+      window.location.href = "./win";
     } else {
       var totalAttempts = localStorage.getItem("attempts");
       localStorage.setItem("attempts", totalAttempts - 1);
       var remainingAttempts = localStorage.getItem("attempts");
       if (remainingAttempts > 0) {
         window.location.href = `./try${remainingAttempts}left`;
-      } else window.location.href = `./win`;
+      } else window.location.href = `./lose`;
     }
   };
 
@@ -151,36 +153,63 @@ class App extends Component {
       <div className="App">
         <header className="header">
           <div className="head-image">
-            <img
+            <img 
               src={header}
-              style={{ display: "inline", width: "100vw", height: "100px" }}
+              style={{ display: "inline", width: "100vw", height: "100%" }}
             ></img>
-          </div>
-          <div className="text">
-            <h3 style={{ color: "whitesmoke" }}>
-              To complete your Highball
-              <br />
-              Choose the Right
-              <br />
-              Whiskey, Mixer and Garnish!
-            </h3>
-          </div>
+          </div>       
         </header>
-        <div className="rule">
-          <h4>
-            Rule⚖️: Drag and Drop the ingredients in sequence starting from top!
-          </h4>
-        </div>
-
         <div className="first">
           <div className="first-one">
             <Target image={this.state.image} />
-            <button onClick={this.check}>Shake</button>
+            <button onClick={this.check}>SHAKE</button>
           </div>
           <div className="App-intro">
             <div className="app-container">
               <div className="item-container">
-                {this.state.items?.map((item, index) => (
+                {/* <Item
+                  key={this.state.items[0].id}
+                  item={this.state.items[0]}
+                  handleDrop={() => {
+                    this.deleteItem(this.state.items[0].id);
+                  }}
+                />
+                <Item
+                  key={this.state.items[1].id}
+                  item={this.state.items[1]}
+                  handleDrop={(key) => {
+                    this.deleteItem(key);
+                  }}
+                />
+                <div className="mixer-top">
+                  <div className="mixers">
+                    <Item
+                      key={this.state.items[2].id}
+                      item={this.state.items[2]}
+                      handleDrop={() => {
+                        this.deleteItem(this.state.items[2].id);
+                      }}
+                    />
+                    <Item
+                      key={this.state.items[3].id}
+                      item={this.state.items[3]}
+                      handleDrop={() => {
+                        this.deleteItem(this.state.items[3].id);
+                      }}
+                    />
+                  </div>
+                  <span className="mix">Mixers</span>
+                </div>
+                <div className="garnish-top">
+                  <div className="garnish">
+                    <Item
+                      key={this.state.items[4].id}
+                      item={this.state.items[4]}
+                      handleDrop={() => {
+                        this.deleteItem(this.state.items[4].id);
+                      }}
+                    /> */}
+                    {this.state.items?.map((item, index) => (
                   <Item
                     key={item.id}
                     item={item}
@@ -189,6 +218,10 @@ class App extends Component {
                     }}
                   />
                 ))}
+                  
+                  {/* </div>
+                  <span className="mix">Garnishes</span>
+                </div> */}
               </div>
             </div>
           </div>

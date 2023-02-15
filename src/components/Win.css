@@ -1,30 +1,94 @@
-*{
-    margin: 0;
-    padding: 0;
+
+.header-top {
+  text-align: center;
 }
-.back button{
-    background-color: white;
-    color: #9C102A;
-    padding: 1% 3%;
-    border-radius: 11px;
-    border:2px solid rgb(229, 214, 186);
+.header-top>h1>i{
+    font-size: 32px;
+    line-height: 0px;
+    padding-top: 0px;
 }
-.back{
-    padding: 6%;
-    padding-bottom: 63%;
-    color: white;
-    background-color: rgb(143, 20, 20);
-    font-family: 'Roboto', sans-serif;
-    line-height: 200%;
+
+.next{
+  position: relative;
+  color: white;
+  margin-top: 15%;
+  background-color: 9C102A;
+  display: flex;
+  flex-direction: column;
+  line-height: 155%;
+  color: white;
+  text-transform: capitalize;
+  font-family: 'Chakra Petch', sans-serif;
 }
-.back>h1{
-    color: white;
+.next::after{
+  content: '';
+  background-color:#9C102A;
+  position: absolute;
+  inset: 0;
+  transform: skewY(-5deg);
+  z-index: -1;
 }
-.mainn{
-    width: 100%;
-    height: 100vh;
+.right {
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: center;
+  padding-bottom: 25px;
 }
-.ap>h1{
-color: white;
-line-height: 100%;
+.right h4{
+  font-family: 'Chakra Petch', sans-serif;
+  text-align: right;
+  line-height: normal;
+}
+.right>h2{
+  color: white;
+  line-height: 100%;
+  font-size: 25px;
+}
+.right h5{
+  font-family: 'Chakra Petch', sans-serif;
+}
+.right button {
+  background-color: white;
+  color: #9C102A;
+  padding: 10px 15px;
+  border-radius: 8px;
+    font-size: 15px;
+    border: 1px solid #9C102A;
+    box-shadow: 0 0 0 2px #fff
+}
+.bottom1{
+  display: flex;
+
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.loseImage{
+  /* position: absolute; */
+}
+.text2{
+  /* justify-content: flex-end;
+  align-items: flex-end; */
+  margin-right: 4%;
+}
+.text2>h4{
+  text-align: right;
+}
+.text2>h2{
+   text-align: right;
+}
+.endd>h6{
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  padding-inline: 8px;
+}
+#mid {
+  margin: 5%;
+}
+@media screen and (min-width: 500px) {
+  .right {
+    text-align: center;
+    padding-right: 5%;
+  }
 }
