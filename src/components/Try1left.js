@@ -6,7 +6,7 @@ export default class Try1left extends Component {
     const {text} = this.props;
     return (
       <div className="main-try">
-        <HeaderElement/>
+        <HeaderElement />
         <div className="header-next">
           <h3>MAKE YOURSELF AN AMERICAN PRIDE HIGHBALL.</h3>
           <h3>
@@ -14,19 +14,17 @@ export default class Try1left extends Component {
           </h3>
           <br />
           <br />
-
-          <div className="diagonal">
-            <div className="message">
-              <h4>
-               { text }
-              </h4>
-              <br />
-              <br />
-              <a href="/App">
-                <button>
-                  <b>TRY POURING AGAIN</b>
-                </button>
-              </a>
+         
+            <div className="diagonal">
+              <div className="message">
+                <h4>{text}</h4>
+                <br />
+                <br />
+                <a href="/App">
+                  <button>
+                    <b>TRY POURING AGAIN</b>
+                  </button>
+                </a>
             </div>
           </div>
         </div>
