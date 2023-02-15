@@ -45,7 +45,6 @@ h5{
 .mainn{
   position: relative;
   height: 100vh;
-  overflow: hidden;
   align-items: flex-end;
   display: flex;
   flex-direction: column;
