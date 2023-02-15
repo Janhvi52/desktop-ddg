@@ -2,6 +2,7 @@
 .diagonal{
     position: relative;
     isolation: isolate;
+    overflow-y: hidden;
     padding-block: 3rem;
     margin-block: 3%;
     color: white;
