@@ -68,10 +68,10 @@ const images = {
   3456: "images/image2356.png",
   12345:"images/image1245.png",
   12346: "images/image1246.png",
-  12356: "images/image1256.png",
-  12456: "images/image1256.png",
-  13456: "images/image1256.png",
-  23456: "images/image2356.png",
+  12356: "images/image12561.png",
+  12456: "images/image12561.png",
+  13456: "images/image12561.png",
+  23456: "images/image23456.png",
   123456: "images/image123456.png",
 };
 
