@@ -27,17 +27,21 @@ body {
   left: -160px;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
   flex-direction: column;
- 
 }
 .first-one>button{
   background-color: #9C102A;
   color:white;
-  padding: 2% 4%;
+  position: absolute;
+  bottom: -63px;
+  right: 140px;
+  padding: 8px 40px;
+  border-radius: 8px;
     font-size: 15px;
-    border: 1.8px solid #9C102A;
-    box-shadow: 0 0 0 3px #ece7e8, 0 0 0 5px #9C102A;
-    margin: 2%;
+    border: 1px solid #9C102A;
+    box-shadow: 0 0 0 2px #ece7e8, 0 0 0 4px #9C102A;
+    margin: 5%;
 }
 .App-title {
   font-size: 1.5em;

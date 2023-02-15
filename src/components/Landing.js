@@ -28,37 +28,34 @@ const Landing = () => {
           </h3>
         </div>
       </div>
-              <div className="n4">
-          <div className="n6">
-            <form action="./App">
-              <label>
-                <h4>
-                  <b>Please enter your mobile no.</b>
-                </h4>
-              </label>
-              <input
-                type="number"
-                size="2"
-                maxLength="10"
-                pattern="\d{9}"
-                placeholder="+91 1234567890"
-                required
-              />
-
-              <h3>
-                <span>
-                  <input type="checkbox" required />
-                </span>{" "}
-                PLEASE CONFIRM <br />
-                IF YOU ARE ABOVE LEGAL DRINKING
-              </h3>
-
-              <div className="b">
-                <input type="submit" value="NEXT"></input>
-              </div>
-            </form>
+      <div className="n6">
+        <form action="./App">
+          <label>
+            <h4>
+              <b>Please enter your mobile no.</b>
+            </h4>
+          </label>
+          <input
+            className="inputNumber"
+            type="number"
+            size="2"
+            maxLength="10"
+            pattern="\d{9}"
+            placeholder="+91 1234567890"
+            required
+          />
+          <div className="pleaseConfirm">
+            <span>
+              <input type="checkbox" required />
+            </span>
+              PLEASE CONFIRM IF YOU ARE
+              <br /> ABOVE LEGAL DRINKING
           </div>
-        </div>
+          <div>
+            <input className="button-next" type="submit" value="NEXT"></input>
+          </div>
+        </form>
+      </div>
       <div className="image-text">
         <img
           className="landingImage"

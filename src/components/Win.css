@@ -1,46 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .header-top {
   text-align: center;
 }
 .header-top>h1>i{
     font-size: 32px;
+    line-height: 0px;
+    padding-top: 0px;
 }
 
 .next{
   position: relative;
   color: white;
-  margin-top: 20%;
-  background-color: rgb(143, 20, 20);
+  margin-top: 15%;
+  background-color: 9C102A;
   display: flex;
+  flex-direction: column;
   line-height: 155%;
   color: white;
   text-transform: capitalize;
-  padding-bottom: 95%;
   font-family: 'Chakra Petch', sans-serif;
 }
 .next::after{
   content: '';
-  background-color:rgb(143, 20, 20);
+  background-color:#9C102A;
   position: absolute;
   inset: 0;
   transform: skewY(-5deg);
   z-index: -1;
 }
 .right {
-
-    position: absolute;
-    left: 20%;
-  padding-top: 1%;
-  text-align: right;
- 
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: center;
+  padding-bottom: 25px;
 }
 .right h4{
   font-family: 'Chakra Petch', sans-serif;
   text-align: right;
+  line-height: normal;
 }
 .right>h2{
   color: white;
@@ -52,27 +49,46 @@
 }
 .right button {
   background-color: white;
-  color: maroon;
-  padding: 3.5% 5%;
+  color: #9C102A;
+  padding: 10px 15px;
+  border-radius: 8px;
     font-size: 15px;
-    border: 1.8px solid maroon;
-    box-shadow: 0 0 0 4px #fff, 0 0 0 4px #888;
+    border: 1px solid #9C102A;
+    box-shadow: 0 0 0 2px #fff
 }
+.bottom1{
+  display: flex;
 
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.loseImage{
+  /* position: absolute; */
+}
+.text2{
+  /* justify-content: flex-end;
+  align-items: flex-end; */
+  margin-right: 4%;
+}
+.text2>h4{
+  text-align: right;
+}
+.text2>h2{
+   text-align: right;
+}
 .endd>h6{
-  text-align: left;
+  text-align: center;
   font-size: 12px;
+  line-height: 16px;
+  padding-inline: 8px;
 }
 #mid {
-  padding: 1%;
+  margin: 5%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .right {
-       text-align: center;
+    text-align: center;
     padding-right: 5%;
-  }
-  .next {
-    width: 380px;
-    height: 540px;
   }
 }

@@ -10,7 +10,7 @@ class Win extends Component {
 render(){
   
   return (
-    <div className="mainn">
+    <div className="lose">
       <HeaderElement/>
       <br/>
       <br/>
@@ -25,9 +25,8 @@ render(){
         </div>
         
         <br />
-
           <button onClick={this.buttonClick}>TRY POURING AGAIN</button>
-        
+
       </div>
     </div>
   );

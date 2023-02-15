@@ -162,7 +162,7 @@ class App extends Component {
         <div className="first">
           <div className="first-one">
             <Target image={this.state.image} />
-            <button onClick={this.check}>Shake</button>
+            <button onClick={this.check}>SHAKE</button>
           </div>
           <div className="App-intro">
             <div className="app-container">

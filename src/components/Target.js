@@ -16,7 +16,12 @@ class Target extends Component {
     return connectDropTarget(
       <div className="target">
         <img src={image} alt="glass" style={{ width: "110%" }}></img>
-
+        <div className="text-under-image">
+          <h6> ESTD 1886</h6>
+          <h3>ROYAL CHALLENGE</h3>
+          <h2>AMERICAN</h2>
+          <h2>—PRIDE™️—</h2>
+        </div>
 
       </div>
     );

@@ -4,28 +4,30 @@ import "./Lose.css";
 
 class Lose extends React.Component {
   handlemath() {
-    document.getElementById("mid").innerHTML = ("" + Math.random()).substring(2,8);
+    document.getElementById("mid").innerHTML = ("" + Math.random()).substring(
+      2,
+      8
+    );
   }
   render() {
     return (
       <>
         <div className="my">
-        <HeaderElement/>
+          <HeaderElement />
           <div className="header-top">
             <h1>
               <i>CONGRATULATIONS</i>
             </h1>
           </div>
           <div className="next">
-            <div className="left">
+            <div className="bottom1">
+             <div className="loseImage">
               <img
                 src="images/bglassf11.png"
-                width="100%"
-                height="110%"
                 alt="oops"
-              ></img>
+              />
             </div>
-            <div className="right">
+              <div className="text2">
               <h4>
                 ON WINNING A COMPLIMENTARY HIGHBALL! SHARE YOUR UNIQUE CODE WITH
                 SERVER &
@@ -34,9 +36,10 @@ class Lose extends React.Component {
               <h2>
                 <b>GRAB YOUR FIRST HIGHBALL</b>
               </h2>
-              <br />
+              </div>
+            </div>
+            <div className="right">
               <h5>Your Unique Code is</h5>
-
               <div id="mid">
                 <button onClick={this.handlemath}>Click Here!</button>
               </div>

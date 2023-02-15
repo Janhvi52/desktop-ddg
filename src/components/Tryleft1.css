@@ -2,18 +2,19 @@
 .diagonal{
     position: relative;
     isolation: isolate;
-    padding-block: 4rem;
+    padding-block: 3rem;
+    margin-block: 3%;
     color: white;
     text-transform: capitalize;
-   height: 70vh;
+    height: 35%;
     font-family: 'Chakra Petch', sans-serif;
 }
 .diagonal::after{
     content: '';
-    background-color: rgb(173, 25, 25);
+    background-color: #9C102A;
     position: absolute;
     inset: 0;
-    transform: skewY(-5deg);
+    transform: skewY(-7deg);
     z-index: -1;
 }
 .message{
@@ -23,9 +24,10 @@
    background-color: white;
    color: #9C102A;
    padding: 12px;
+   border-radius: 8px;
      font-size: 15px;
-     border: 1.8px solid #9C102A;
-     box-shadow: 0 0 0 4px #fff, 0 0 0 4px #888;
+     border: 1px solid #9C102A;
+     box-shadow: 0 0 0 2px #fff
 }
 .message>h4{
     font-family: 'Chakra Petch', sans-serif;
