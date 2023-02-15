@@ -4,16 +4,13 @@ import "../App";
 
 const itemSource = {
   beginDrag(props) {
-    console.log("dragging");
     return props.item;
   },
   //to make elements invisible after getting dragged in
   endDrag(props, monitor, component) {
     if (!monitor.didDrop()) {
-      console.log("dragging stopped");
       return;
     }
-    console.log(props.item.id+" oooookkkkk")
     return props.handleDrop(props.item.id);
   },
 };

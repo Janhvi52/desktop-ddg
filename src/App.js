@@ -100,13 +100,11 @@ class App extends Component {
   componentDidMount() {
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
-      console.log(number);
       if (images[number]) {
         this.setState({ image: images[number] });
       } else {
         this.setState({ image: "images/image123456.png" });
       }
-      console.log(number);
       if (!localStorage.getItem("isKeySet")) {
         localStorage.setItem("attempts", 3);
         localStorage.setItem("isKeySet", "true");
@@ -141,7 +139,6 @@ class App extends Component {
     this.setState((prevState) => {
       del.push(id);
       this.componentDidMount();
-      console.log(del);
       return {
         items: prevState.items.filter((item) => item.id !== id),
       };
