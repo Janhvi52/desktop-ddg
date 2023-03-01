@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Outfit&display=swap);
-
+@import url(//db.onlinewebfonts.com/c/bfbdc6a04609bff0d5ccdfcf6b766d95?family=Flood+Std);
 * {
   margin: 0;
   padding: 0;
@@ -100,4 +100,25 @@ body {
 .mix {
   color: black;
   font-family: "Chakra Petch", sans-serif;
+}
+
+.logo{
+text-align: center;
+}
+.challenge-text{
+  padding-bottom: 5%;
+  font-family: "Flood Std";
+  font-size: 10px;
+  transform: rotate(-5deg);
+}
+.grab-text{
+  font-family: "Flood Std";
+  font-size: 20px;
+  color: rgb(25, 153, 204);
+}
+.grab-text-WIN{
+  font-family: "Flood Std";
+  font-size: 35px;
+  color: rgb(25, 153, 204);
+  transform: rotate(-5deg);
 }

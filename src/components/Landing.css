@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Fjalla+One&family=Outfit&family=Permanent+Marker&family=Roboto:wght@100;400&display=swap");
+
+@import url("https://fonts.cdnfonts.com/css/gotham-condensed?styles=15936");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 span {
-  color: #9C102A;
+  color: #9c102a;
 }
 h4 {
   padding-top: 1.4%;
@@ -18,71 +21,67 @@ body {
   height: 100vh;
   background: url("../assets/texturepaper.jpg") no-repeat;
 }
-.header-top {
-  line-height: 280%;
-  transform: rotate(-5deg);
-}
-i{
+
+i {
   color: rgb(16, 132, 179);
   font-family: "Permanent Marker", cursive;
 }
-h1{
-  color: #9C102A;
+h1 {
+  color: #9c102a;
   font-family: "Fjalla One", sans-serif;
   font-size: 50px;
 }
-.image-text{
-  
+.image-text {
   bottom: 0px;
 }
-.bottom-center{
+.bottom-center {
   align-self: center;
 }
-h5{
+h5 {
   font-size: 18px;
   font-weight: 700;
 }
-.mainn{
+.mainn {
   position: relative;
   height: 100vh;
   align-items: flex-end;
   display: flex;
   flex-direction: column;
 }
-.inputNumber{
+.inputNumber {
   padding: 10px;
   border-radius: 8px;
 }
-.n6{
+.n6 {
   margin: 10px 10px;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
-
 }
-.upper-part{
- align-items: flex-start; 
+.upper-part {
+  align-items: flex-start;
 }
-.pleaseConfirm{
+.pleaseConfirm {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 9px;
 }
-.pleaseConfirm>span{
-   margin: 5px;
+.pleaseConfirm > span {
+  margin: 5px;
 }
-h1>h6{
+h1 > h6 {
   font-weight: 200;
   font-size: small;
   font-style: italic;
 }
-h1>h6>i{
+h1 > h6 > i {
   color: black;
 }
 .header-next {
   text-align: center;
+  /* font-family: "Gotham Condensed", sans-serif; */
 }
-.landingImage{
+.landingImage {
   bottom: 0;
   max-height: max-content;
   position: absolute;
@@ -91,14 +90,14 @@ h1>h6>i{
   width: 100%;
   z-index: -1;
 }
-.button-next{
-  background-color: #9C102A;
-  color:white;
+.button-next {
+  background-color: #9c102a;
+  color: white;
   padding: 8px 40px;
-    font-size: 15px;
-    border: 1px solid #9C102A;
-    box-shadow: 0 0 0 2px #ece7e8, 0 0 0 4px #9C102A;
-    margin-top: 15px;
+  font-size: 15px;
+  border: 1px solid #9c102a;
+  box-shadow: 0 0 0 2px #ece7e8, 0 0 0 4px #9c102a;
+  margin-top: 15px;
 }
 input {
   padding: 7px;
@@ -107,24 +106,23 @@ input {
   border: 2px solid rgb(90, 178, 236);
 }
 label {
-  color: #9C102A;
+  color: #9c102a;
 }
 input[type="checkbox"] {
   border-radius: 5px;
   padding: 10px;
 }
-@media screen and (min-width: 500px){
-  .mainn{
+@media screen and (min-width: 500px) {
+  .mainn {
     align-items: center;
   }
-  .landingImage{
+  .landingImage {
     height: auto;
     width: auto;
   }
 }
-@media screen and (min-height: 680px){
-  .n6{
+@media screen and (min-height: 680px) {
+  .n6 {
     margin: 40px 20px;
-    
   }
 }

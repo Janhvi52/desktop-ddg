@@ -1,39 +1,24 @@
 import React from "react";
 import "./Landing.css";
-
+import HeaderElement from "./header";
 const Landing = () => {
   return (
     <div className="mainn">
       <div className="upper-part">
-        <h4>
-          BLENDED WITH <span> AMERICAN BOURBON</span> WHISKEY
-        </h4>
         <div className="header-top">
-          <h2>
-            <i>JOIN THE</i>
-          </h2>
-          <h1>
-            AMERICAN
-            <br />
-            PRIDE
-            <h6>
-              <i>#CHALLENGEACCEPTED</i>
-            </h6>
-          </h1>
+          <HeaderElement />
         </div>
         <div className="header-next">
           <h3>MAKE YOURSELF AN AMERICAN PRIDE HIGHBALL.</h3>
-          <h3>
-            <i>GRAB A COMPLIMENTARY ONE AT THE BAR!</i>
-          </h3>
+          <div className="grab-text">GRAB A COMPLIMENTARY ONE AT THE BAR!</div>
         </div>
       </div>
       <div className="n6">
         <form action="./App">
           <label>
-            <h4>
-              <b>Please enter your mobile no.</b>
-            </h4>
+            <h6>
+              <b>PLEASE ENTER YOUR MOBILE NO.</b>
+            </h6>
           </label>
           <input
             className="inputNumber"
@@ -46,13 +31,13 @@ const Landing = () => {
           />
           <div className="pleaseConfirm">
             <span>
-              <input type="checkbox" required />
+              <input type="checkbox" required color="red" />
+              PLEASE CONFIRM IF YOU ARE ABOVE 
+              <br/>LEGAL DRINKING AGE
             </span>
-              PLEASE CONFIRM IF YOU ARE
-              <br /> ABOVE LEGAL DRINKING
           </div>
           <div>
-            <input className="button-next" type="submit" value="NEXT"></input>
+            <input className="button-next" type="submit" value="ENTER"></input>
           </div>
         </form>
       </div>
