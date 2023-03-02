@@ -15,9 +15,9 @@ class Lose extends React.Component {
         <div className="my">
           <HeaderElement />
           <div className="header-top">
-            <h1>
-              <i>CONGRATULATIONS</i>
-            </h1>
+          <div className="grab-text-WIN">
+             CONGRATULATIONS   
+             </div>
           </div>
           <div className="next">
             <div className="bottom1">
