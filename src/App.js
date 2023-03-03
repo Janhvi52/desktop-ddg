@@ -1,9 +1,9 @@
 /* eslint-disable*/
-import React, { Component} from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Item from "./components/Item";
 import Target from "./components/Target";
-import header from "./assets/headerr.png"
+import header from "./assets/headerr.png";
 import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
 
@@ -66,7 +66,7 @@ const images = {
   2356: "images/image2356.png",
   2456: "images/image2356.png",
   3456: "images/image2356.png",
-  12345:"images/image1245.png",
+  12345: "images/image1245.png",
   12346: "images/image1246.png",
   12356: "images/image12561.png",
   12456: "images/image12561.png",
@@ -84,9 +84,9 @@ class App extends Component {
         { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
         { id: 2, name: "Whisky", url: "/images/bgwhiskey.png" },
         { id: 3, url: "/images/bgcola.png" },
-        { id: 4,name: "Mixers", url: "/images/bgsoda.png" },
+        { id: 4, name: "Mixers", url: "/images/bgsoda.png" },
         { id: 5, url: "images/bgorange.png" },
-        { id: 6,  name: "Garnishes",url: "/images/lemon.png" },
+        { id: 6, name: "Garnishes", url: "/images/lemon.png" },
       ],
     };
   }
@@ -121,8 +121,8 @@ class App extends Component {
       del.includes(this.data[2].id) &&
       del.includes(this.data[3].id);
 
-      var attemptt = localStorage.getItem("attempts");
-    if (del.length === 4 && combo && attemptt>0) {
+    var attemptt = localStorage.getItem("attempts");
+    if (del.length === 4 && combo && attemptt > 0) {
       localStorage.setItem("attempts", 0);
       window.location.href = "./win";
     } else {
@@ -150,11 +150,11 @@ class App extends Component {
       <div className="App">
         <header className="header">
           <div className="head-image">
-            <img 
+            <img
               src={header}
               style={{ display: "inline", width: "100vw", height: "100%" }}
             ></img>
-          </div>       
+          </div>
         </header>
         <div className="first">
           <div className="first-one">
@@ -206,7 +206,7 @@ class App extends Component {
                         this.deleteItem(this.state.items[4].id);
                       }}
                     /> */}
-                    {this.state.items?.map((item, index) => (
+                {this.state.items?.map((item, index) => (
                   <Item
                     key={item.id}
                     item={item}
@@ -215,8 +215,8 @@ class App extends Component {
                     }}
                   />
                 ))}
-                  
-                  {/* </div>
+
+                {/* </div>
                   <span className="mix">Garnishes</span>
                 </div> */}
               </div>
