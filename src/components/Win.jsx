@@ -5,8 +5,6 @@ import "./Lose.css";
 const Lose = () => {
   const [uniqueCode, setUniqueCode] = useState("");
   const phoneNumber = localStorage.getItem("phoneNumber")
-  console.log(phoneNumber);
-  console.log(uniqueCode)
 
   const getUniqueCode = async () => {
     try {
