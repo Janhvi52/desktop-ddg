@@ -1,7 +1,40 @@
-import React from "react";
+import {React, useState } from "react";
 import "./Landing.css";
 
 const Landing = () => {
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const submitData = (event) => {
+    event.preventDefault();
+    fetch('https://nbrm3t7gl1.execute-api.us-east-1.amazonaws.com/prod/registerUser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        phoneNumber: phoneNumber,
+        productId: '679'
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'SUCCESS') {
+          console.log('User registered successfully!');
+          localStorage.setItem("phoneNumber", phoneNumber)
+          window.location.href="./App";
+
+        } else {
+          console.error(data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error registering user:', error);
+      });
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
+  }
+
   return (
     <div className="mainn">
       <div className="upper-part">
@@ -29,7 +62,7 @@ const Landing = () => {
         </div>
       </div>
       <div className="n6">
-        <form action="./App">
+        <form onSubmit={submitData}>
           <label>
             <h4>
               <b>Please enter your mobile no.</b>
@@ -38,6 +71,8 @@ const Landing = () => {
           <input
             className="inputNumber"
             type="number"
+            value={phoneNumber} 
+            onChange={handlePhoneNumberChange} 
             size="2"
             maxLength="10"
             pattern="\d{9}"
@@ -48,8 +83,8 @@ const Landing = () => {
             <span>
               <input type="checkbox" required />
             </span>
-              PLEASE CONFIRM IF YOU ARE
-              <br /> ABOVE LEGAL DRINKING
+            PLEASE CONFIRM IF YOU ARE
+            <br /> ABOVE LEGAL DRINKING
           </div>
           <div>
             <input className="button-next" type="submit" value="NEXT"></input>
