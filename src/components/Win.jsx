@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeaderElement from "./header";
 import "./Lose.css";
 
+
 const Lose = () => {
   const [uniqueCode, setUniqueCode] = useState("");
   const phoneNumber = localStorage.getItem("phoneNumber")
@@ -71,9 +72,10 @@ const Lose = () => {
             </div>
             <div className="endd">
               <h6>
-                A maximun of one complimentary Highball drink per particioant
+                A maximun of one complimentary Highball drink per participant
                 can be availed through this offer
               </h6>
+
             </div>
           </div>
         </div>
