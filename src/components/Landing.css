@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Fjalla+One&family=Outfit&family=Permanent+Marker&family=Roboto:wght@100;400&display=swap");
-@import url(https://www.dafontfree.net/embed/Zmxvb2Qtc3RkLXJlZ3VsYXImZGF0YS80Ni9mLzU4MDc1L0Zsb29kU3RkLm90Zg);
-@import url(//db.onlinewebfonts.com/c/69df522a1d4d212441e24b2ca72f4862?family=Gotham+Condensed);
-@import url(//db.onlinewebfonts.com/c/f3ba9eeaa53136ebca45b7f455558331?family=Flood+Std);
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +10,7 @@ span {
 h4 {
   padding-top: 1.4%;
   font-weight: 700;
-  font-family: "flood-std-regular";
+  font-family: "flood-std", sans-serif;
   text-align: center;
 }
 body {
@@ -24,7 +21,7 @@ body {
 
 i {
   color: rgb(16, 132, 179);
-  font-family: "flood-std-regular", cursive;
+  font-family: "flood-std", sans-serif;
 }
 h1 {
   color: #9c102a;
