@@ -98,15 +98,15 @@ body {
 }
 .mix {
   color: black;
-  font-family: 'Gotham Condensed';
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .logo {
   text-align: center;
 }
 .logo>h4{
-  font-family: 'Gotham Condensed';
-  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
 }
 .challenge-text {
   padding-bottom: 5%;

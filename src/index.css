@@ -3,11 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Outfit&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Outfit&family=Permanent+Marker&display=swap');
 #root{
   overflow-x: hidden;
 }
+
 *{
   box-sizing: border-box;
   margin: 0;

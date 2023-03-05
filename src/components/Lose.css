@@ -16,7 +16,7 @@
     padding: 6%;
     padding-bottom: 63%;
     color: white;
-    font-family: 'Gotham Condensed';
+    font-family: 'Roboto Condensed', sans-serif;
     line-height: 200%;
     position: relative;
     isolation: isolate;
@@ -25,8 +25,8 @@
     color: white;
     text-transform: capitalize;
     height: 35%;
-    font-family: 'Gotham Condensed';
-    font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
 
 }
 .back::after{
