@@ -18,7 +18,7 @@
   line-height: 155%;
   color: white;
   text-transform: capitalize;
-  font-family: 'Gotham Condensed';
+  font-family: 'Roboto Condensed', sans-serif;
  
 }
 .next::after{
@@ -36,7 +36,7 @@
   padding-bottom: 25px;
 }
 .right h4{
-  font-family: 'Gotham Condensed';
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: right;
   line-height: normal;
 }
@@ -46,7 +46,7 @@
   font-size: 25px;
 }
 .right h5{
-  font-family: 'Gotham Condensed';
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .right button {
   background-color: white;
@@ -76,16 +76,18 @@
 .text2>h4{
   padding-top: 10px;
   text-align: right;
-  font-family: 'Gotham Condensed';
-  font-size: 30px;
-  line-height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  line-height: 110%;
 }
 .text2>h2{
    text-align: right;
+   font-family: 'Merriweather', serif;
+  font-size: 25px;
 }
 .endd>h6{
   text-align: center;
-  font-size: 20px;
+  font-size: 17px;
   padding-inline: 8px;
 }
 #mid {
