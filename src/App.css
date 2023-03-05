@@ -100,14 +100,14 @@ body {
 }
 .mix {
   color: black;
-  font-family: 'Gotham Condensed';
+  font-family: "Gotham Condensed";
 }
 
 .logo {
   text-align: center;
 }
-.logo>h4{
-  font-family: 'Gotham Condensed';
+.logo > h4 {
+  font-family: "Gotham Condensed";
   font-size: 20px;
 }
 .challenge-text {
@@ -126,4 +126,13 @@ body {
   font-size: 35px;
   color: rgb(25, 153, 204);
   transform: rotate(-5deg);
+}
+@font-face {
+  font-family: "Flood Std";
+  src: url("https://www.dafontfree.net/data/46/f/58075/FloodStd.otf")
+      format("woff"),
+    url("https://www.dafontfree.net/data/46/f/58075/FloodStd.otf")
+      format("opentype"),
+    url("https://www.dafontfree.net/data/46/f/58075/FloodStd.otf")
+      format("truetype");
 }

@@ -13,7 +13,7 @@ span {
 h4 {
   padding-top: 1.4%;
   font-weight: 700;
-  font-family: "Flood Std";
+  font-family: "flood-std-regular";
   text-align: center;
 }
 body {
@@ -24,7 +24,7 @@ body {
 
 i {
   color: rgb(16, 132, 179);
-  font-family: "Flood Std", cursive;
+  font-family: "flood-std-regular", cursive;
 }
 h1 {
   color: #9c102a;
