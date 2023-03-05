@@ -18,7 +18,8 @@
   line-height: 155%;
   color: white;
   text-transform: capitalize;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Gotham Condensed';
+ 
 }
 .next::after{
   content: '';
@@ -35,7 +36,7 @@
   padding-bottom: 25px;
 }
 .right h4{
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Gotham Condensed';
   text-align: right;
   line-height: normal;
 }
@@ -45,7 +46,7 @@
   font-size: 25px;
 }
 .right h5{
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Gotham Condensed';
 }
 .right button {
   background-color: white;
@@ -70,17 +71,21 @@
   /* justify-content: flex-end;
   align-items: flex-end; */
   margin-right: 4%;
+ 
 }
 .text2>h4{
+  padding-top: 10px;
   text-align: right;
+  font-family: 'Gotham Condensed';
+  font-size: 30px;
+  line-height: 100%;
 }
 .text2>h2{
    text-align: right;
 }
 .endd>h6{
   text-align: center;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 20px;
   padding-inline: 8px;
 }
 #mid {
