@@ -73,8 +73,7 @@ const Lose = () => {
             </div>
             <div className="endd">
               <h6>
-                A maximun of one complimentary Highball drink per participant
-                can be availed through this offer
+              A maximum of five complimentary Highball drink per participant can be availed through this offer
               </h6>
 
             </div>

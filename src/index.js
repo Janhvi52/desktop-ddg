@@ -18,8 +18,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/App" element={<App/>}/>
           <Route path="/Win" element={<Win/>}/>
           <Route path="/Lose" element={<Lose/>}/>
-          <Route path="/Try1left" element={<Try1left text="Oh! This is your last attempt to win yourself a RC American Pride Highball"/>}/>
-          <Route path="/Try2left" element={<Try1left text="Great! You have two more attempts to win yourself a complementary RC American Pride Highball"/>}/>
+          <Route path="/Try1left" element={<Try1left text="OH... THIS IS YOUR LAST ATTEMPT TO WIN YOURSELF A RC AMERICAN PRIDE HIGHBALL"/>}/>
+          <Route path="/Try2left" element={<Try1left text="GREAT! YOU HAVE TWO MORE ATTEMPTS TO WIN YOURSELF A COMPLEMENTARY RC AMERICAN PRIDE HIGHBALLl"/>}/>
         </Routes>
    
   </BrowserRouter>

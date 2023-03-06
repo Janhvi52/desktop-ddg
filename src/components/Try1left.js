@@ -7,7 +7,7 @@ export default class Try1left extends Component {
     return (
       <div className="main-try">
         <HeaderElement />
-        <div className="header-next">
+        <div className="header-next1">
          
          
             <div className="diagonal">
