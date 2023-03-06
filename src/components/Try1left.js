@@ -7,13 +7,8 @@ export default class Try1left extends Component {
     return (
       <div className="main-try">
         <HeaderElement />
-        <div className="header-next">
-          <h3>MAKE YOURSELF AN AMERICAN PRIDE HIGHBALL.</h3>
-          <h3>
-            <i>GRAB A COMPLIMENTARY ONE AT THE BAR!</i>
-          </h3>
-          <br />
-          <br />
+        <div className="header-next1">
+         
          
             <div className="diagonal">
               <div className="message">
