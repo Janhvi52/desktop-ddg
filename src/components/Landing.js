@@ -19,7 +19,12 @@ const Landing = () => {
       .then(data => {
         if (data.status === 'SUCCESS') {
           console.log('User registered successfully!');
-          localStorage.setItem("phoneNumber", phoneNumber)
+          const phoneNumber1 = localStorage.getItem("phoneNumber")
+          localStorage.setItem("phoneNumber", phoneNumber);
+          const phoneNumber2 = localStorage.getItem("phoneNumber")
+          if(phoneNumber1 != phoneNumber2 || !phoneNumber){
+            localStorage.setItem("attempts", 3);
+          }
           window.location.href="./App";
 
         } else {
@@ -46,30 +51,29 @@ const Landing = () => {
           <div className="grab-text">GRAB A COMPLIMENTARY ONE AT THE BAR!</div>
         </div>
       </div>
-      <div className="n6">
+      <div className="n4">
         <form onSubmit={submitData}>
-          <label>
-            <h6>
+        <div className="n6">
+            <h6 className="labelForMobileNo">
               <b>PLEASE ENTER YOUR MOBILE NO.</b>
-            </h6>
-          </label>
-          <input
+            </h6>          
+            <input
             className="inputNumber"
             type="number"
             value={phoneNumber} 
             onChange={handlePhoneNumberChange} 
-            size="2"
             maxLength="10"
             pattern="\d{9}"
             placeholder="+91 1234567890"
             required
           />
           <div className="pleaseConfirm">
-            <span>
-              <input type="checkbox" required color="red" />
-              PLEASE CONFIRM IF YOU ARE ABOVE 
-              <br/>LEGAL DRINKING AGE
-            </span>
+            <div>
+              <input type="checkbox" required/></div>
+              <div>
+              PLEASE CONFIRM IF YOU ARE ABOVE LEGAL 
+             <br></br>DRINKING AGE</div>
+          </div>
           </div>
           <div>
             <input className="button-next" type="submit" value="ENTER"></input>

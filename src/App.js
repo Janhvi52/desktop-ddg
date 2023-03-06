@@ -141,6 +141,7 @@ class App extends Component {
       this.componentDidMount();
       return {
         items: prevState.items.filter((item) => item.id !== id),
+        // items: prevState.items.filter((item) => item.id == item.id), add this to show item even after drag end
       };
     });
   };
@@ -164,48 +165,6 @@ class App extends Component {
           <div className="App-intro">
             <div className="app-container">
               <div className="item-container">
-                {/* <Item
-                  key={this.state.items[0].id}
-                  item={this.state.items[0]}
-                  handleDrop={() => {
-                    this.deleteItem(this.state.items[0].id);
-                  }}
-                />
-                <Item
-                  key={this.state.items[1].id}
-                  item={this.state.items[1]}
-                  handleDrop={(key) => {
-                    this.deleteItem(key);
-                  }}
-                />
-                <div className="mixer-top">
-                  <div className="mixers">
-                    <Item
-                      key={this.state.items[2].id}
-                      item={this.state.items[2]}
-                      handleDrop={() => {
-                        this.deleteItem(this.state.items[2].id);
-                      }}
-                    />
-                    <Item
-                      key={this.state.items[3].id}
-                      item={this.state.items[3]}
-                      handleDrop={() => {
-                        this.deleteItem(this.state.items[3].id);
-                      }}
-                    />
-                  </div>
-                  <span className="mix">Mixers</span>
-                </div>
-                <div className="garnish-top">
-                  <div className="garnish">
-                    <Item
-                      key={this.state.items[4].id}
-                      item={this.state.items[4]}
-                      handleDrop={() => {
-                        this.deleteItem(this.state.items[4].id);
-                      }}
-                    /> */}
                 {this.state.items?.map((item, index) => (
                   <Item
                     key={item.id}
@@ -215,10 +174,6 @@ class App extends Component {
                     }}
                   />
                 ))}
-
-                {/* </div>
-                  <span className="mix">Garnishes</span>
-                </div> */}
               </div>
             </div>
           </div>

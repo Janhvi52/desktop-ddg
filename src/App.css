@@ -54,7 +54,6 @@ body {
   right: 20px;
   position: absolute;
 }
-
 .header {
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.2rem;
@@ -89,29 +88,25 @@ body {
     justify-content: space-around;
   }
 }
-
-.mixers {
-  display: flex;
-}
 .garnish {
   display: flex;
 }
-.mix {
-  color: black;
-  font-family: 'Roboto Condensed', sans-serif;
+.inside{
+  font-family: "flood-std", sans-serif;
+  margin-bottom: 25px;
 }
-
 .logo {
   text-align: center;
 }
 .logo>h4{
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
+  color: rgb(75, 75, 75);
 }
 .challenge-text {
   padding-bottom: 5%;
   font-family: "flood-std", sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   transform: rotate(-5deg);
 }
 .grab-text {

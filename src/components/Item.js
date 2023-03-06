@@ -30,14 +30,16 @@ class Item extends Component {
       connectDragSource,
       item: { url, name },
     } = this.props;
-    const opacity = isDragging ? 0 : 1;
+    const opacity = isDragging ? 0.2 : 1;
+    const marginBottom = name ? "30px" : "0px";
+    const display = name ? "inline" : "";
 
     return connectDragSource(
-      <div className="item" style={{ opacity }}>
+      <div className="item" style={{ opacity, display }}>
         <span>
-          <img src={url} alt="" width="65px"></img>
+          <img src={url} alt="image" width="65px"></img>
         </span>
-        <div className="inside">{name}</div>
+        <div className="inside" style={{marginBottom}}>{name}</div>
       </div>
     );
   }
