@@ -7,6 +7,14 @@
     line-height: 0px;
     padding-top: 0px;
 }
+.addBg{
+  z-index: -5;
+  background-image: url("/public/images/footerBg.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .next{
   position: relative;
@@ -19,14 +27,8 @@
   color: white;
   text-transform: capitalize;
   font-family: 'Roboto Condensed', sans-serif;
- 
 }
 .next::after{
-  content: '';
-  background-color:#9C102A;
-  position: absolute;
-  inset: 0;
-  transform: skewY(-5deg);
   z-index: -1;
 }
 .right {

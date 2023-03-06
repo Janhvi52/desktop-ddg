@@ -45,6 +45,7 @@ const Lose = () => {
             <i>CONGRATULATIONS</i>
           </h1>
         </div>
+        <div className="addBg">
         <div className="next">
           <div className="bottom1">
             <div className="loseImage">
@@ -78,6 +79,7 @@ const Lose = () => {
 
             </div>
           </div>
+        </div>
         </div>
       </div>
     </>
