@@ -12,38 +12,36 @@
       box-shadow: 0 0 0 2px #fff
 }
 .back{
+    
     padding: 6%;
+    padding-bottom: 63%;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 200%;
-    margin-top: 7%;
+    position: relative;
+    isolation: isolate;
+    padding-block: 3rem;
+    margin-block: 3%;
     color: white;
     text-transform: capitalize;
+    height: 35%;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 17px;
-    z-index: -5;
-    background-image: url("/public/images/footerBg.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: absolute;
-    height:100vh;
-    text-align: center;
-  
-}
 
+}
+.back::after{
+    content: '';
+    background-color: #9C102A;
+    position: absolute;
+    inset: 0;
+    transform: skewY(-7deg);
+    z-index: -1;
+}
 .back>h1{
     color: white;
-   
 }
-.back>h3{
-    margin-top: 120px;
-    font-weight: 100;
-    font-size: larger;
-}
+
 .ap>h1{
 color: white;
 line-height: 100%;
-font-family: 'Roboto', sans-serif;
 }
