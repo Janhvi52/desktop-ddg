@@ -65,7 +65,7 @@ const Lose = () => {
             <h5>Your Unique Code is</h5>
             <div id="mid">
               {uniqueCode ? ( 
-                <h2>{uniqueCode}<br></br>{Number.isInteger(uniqueCode) ? "Unique Code generated" : ""}</h2>
+                <h2>{uniqueCode}<br></br></h2>
               ) : (
                 <button onClick={getUniqueCode}>Click Here!</button>
               )}
