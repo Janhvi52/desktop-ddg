@@ -4,6 +4,7 @@ import "./App.css";
 import Item from "./components/Item";
 import Target from "./components/Target";
 import header from "./assets/headerr.png";
+import image2 from "./assets/image2.png"
 import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
 
@@ -11,7 +12,7 @@ const del = [];
 
 const images = {
   1: "images/image1.png",
-  2: "images/image2.png",
+  2:  image2,
   3: "images/image3.png",
   4: "images/image4.png",
   5: "images/image5.png",
@@ -100,20 +101,22 @@ class App extends Component {
   componentDidMount() {
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
-      console.log(number)
+      console.log(number);
       if (images[number]) {
-        this.setState({ image: images[number] });
+        this.setState({ image: images[number] }, () => {
+          if (!localStorage.getItem("isKeySet")) {
+            localStorage.setItem("attempts", 3);
+            localStorage.setItem("isKeySet", "true");
+          }
+        });
       } else {
         this.setState({ image: "images/image123456.png" });
-      }
-      if (!localStorage.getItem("isKeySet")) {
-        localStorage.setItem("attempts", 3);
-        localStorage.setItem("isKeySet", "true");
       }
     } else {
       this.setState({ image: "images/glass.png" });
     }
   }
+  
 
   check = () => {
     var combo =
@@ -141,7 +144,7 @@ class App extends Component {
       del.push(id);
       this.componentDidMount();
       return {
-        items: prevState.items.filter((item) => item.id !== id),
+        items: prevState.items.filter((item) => item.id != id),
         // items: prevState.items.filter((item) => item.id == item.id), add this to show item even after drag end
       };
     });
