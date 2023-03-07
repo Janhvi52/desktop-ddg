@@ -36,7 +36,6 @@ const images = {
   124: "images/image124.png",
   126: "images/image126.png",
   134: "images/image123.png",
- 
   135: "images/image135.png",
   136: "images/image136.png",
   145: "images/image146.png",
@@ -72,7 +71,6 @@ const images = {
   12356: "images/image12356.png",
   12456: "images/image12456.png",
   13456: "images/image12356.png",
-     //done till  here
   23456: "images/image23456.png",
   123456: "images/image123456.png",
 };
@@ -102,6 +100,7 @@ class App extends Component {
   componentDidMount() {
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
+      console.log(number)
       if (images[number]) {
         this.setState({ image: images[number] });
       } else {
