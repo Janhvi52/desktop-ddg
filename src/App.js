@@ -4,7 +4,10 @@ import "./App.css";
 import Item from "./components/Item";
 import Target from "./components/Target";
 import header from "./assets/headerr.png";
-import image2 from "./assets/image2.png"
+import image2 from "./assets/image2.png";
+import image1234 from "./assets/image1234.png";
+import image23456 from "./assets/image23456.png";
+import image123456 from "./assets/image123456.png";
 import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
 
@@ -52,7 +55,7 @@ const images = {
   346: "images/image236.png",
   356: "images/image356.png",
   456: "images/image456.png",
-  1234: "images/image1234.png",
+  1234: image1234,
   1235: "images/image1235.png",
   1236: "images/image1236.png",
   1245: "images/image1245.png",
@@ -72,8 +75,8 @@ const images = {
   12356: "images/image12356.png",
   12456: "images/image12456.png",
   13456: "images/image12356.png",
-  23456: "images/image23456.png",
-  123456: "images/image123456.png",
+  23456: image23456,
+  123456: image123456,
 };
 
 class App extends Component {
@@ -110,7 +113,7 @@ class App extends Component {
           }
         });
       } else {
-        this.setState({ image: "images/image123456.png" });
+        this.setState({ image: image123456 });
       }
     } else {
       this.setState({ image: "images/glass.png" });
