@@ -49,7 +49,6 @@ class Item extends Component {
       styles
     } = this.props;
     const { isDropped } = this.state;
-    // const opacity = isDragging ? 0.3 : 1;
     const marginBottom = name ? "30px" : "0px";
     const display = name ? "inline" : "";
     const style = {
