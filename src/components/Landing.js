@@ -1,6 +1,5 @@
 import {React, useState } from "react";
 import "./Landing.css";
-import HeaderElement from "./header";
 const Landing = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const submitData = (event) => {
@@ -22,7 +21,7 @@ const Landing = () => {
           const phoneNumber1 = localStorage.getItem("phoneNumber")
           localStorage.setItem("phoneNumber", phoneNumber);
           const phoneNumber2 = localStorage.getItem("phoneNumber")
-          if(phoneNumber1 != phoneNumber2 || !phoneNumber){
+          if(phoneNumber1 !== phoneNumber2 || !phoneNumber){
             localStorage.setItem("attempts", 3);
           }
           window.location.href="./App";
@@ -41,16 +40,7 @@ const Landing = () => {
   }
 
   return (
-    <div className="mainn">
-      <div className="upper-part">
-        <div className="header-top">
-          <HeaderElement />
-        </div>
-        <div className="header-next">
-          <h3>MAKE YOURSELF AN AMERICAN PRIDE HIGHBALL.</h3>
-          <div className="grab-text">GRAB A COMPLIMENTARY ONE AT THE BAR!</div>
-        </div>
-      </div>
+    <div className="LandingPage">
       <div className="n4">
         <form onSubmit={submitData}>
         <div className="n6">
@@ -75,17 +65,10 @@ const Landing = () => {
              <br></br>DRINKING AGE</div>
           </div>
           </div>
-          <div>
+          <div className="enterButton">
             <input className="button-next" type="submit" value="ENTER"></input>
           </div>
         </form>
-      </div>
-      <div className="image-text">
-        <img
-          className="landingImage"
-          src="images/landing1.png"
-          alt="oops!"
-        ></img>
       </div>
     </div>
   );
