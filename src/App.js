@@ -12,6 +12,7 @@ import TouchBackend from "react-dnd-touch-backend";
 import { DragDropContext } from "react-dnd";
 
 const del = [];
+const styles = []
 
 const images = {
   1: "images/image1.png",
@@ -146,8 +147,33 @@ class App extends Component {
     this.setState((prevState) => {
       del.push(id);
       this.componentDidMount();
+      if(id===3 || id === 4){
+            styles[3] =  {
+              opacity: 0.3,
+              pointerEvents: "none",
+            }
+            styles[4] =  {
+              opacity: 0.3,
+              pointerEvents: "none",
+            }
+      }
+      if(id===5 || id === 6){
+        styles[5] =  {
+          opacity: 0.3,
+          pointerEvents: "none",
+        }
+        styles[6] =  {
+          opacity: 0.3,
+          pointerEvents: "none",
+        }
+  }
+      else{
+        styles[id] = {
+          opacity: 0.3,
+          pointerEvents: "none",
+        }
+      }
       return {
-        // items: prevState.items.filter((item) => item.id != id),
         items: prevState.items.filter((item) => item.id == item.id),
       };
     });
@@ -174,10 +200,11 @@ class App extends Component {
               <div className="item-container">
                 {this.state.items?.map((item, index) => (
                   <Item
+                    styles = {styles}
                     key={item.id}
                     item={item}
                     handleDrop={(id) => {
-                      this.deleteItem(id);
+                        this.deleteItem(id);
                     }}
                   />
                 ))}

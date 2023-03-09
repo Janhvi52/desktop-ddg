@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { DragSource } from "react-dnd";
 import "../App";
 
+
 const itemSource = {
   beginDrag(props) {
     return props.item;
@@ -12,11 +13,13 @@ const itemSource = {
     }
     const { id } = props.item;
     props.handleDrop(id);
+
     component.setState((prevState) => ({
       ...prevState,
       isDropped: {
         ...prevState.isDropped,
         [id]: true,
+        [id+1]: true,
       },
     }));
   },
@@ -43,17 +46,16 @@ class Item extends Component {
       isDragging,
       connectDragSource,
       item: { url, name, id },
+      styles
     } = this.props;
     const { isDropped } = this.state;
-    const opacity = isDragging ? 0.3 : 1;
+    // const opacity = isDragging ? 0.3 : 1;
     const marginBottom = name ? "30px" : "0px";
     const display = name ? "inline" : "";
     const style = {
-      opacity: isDropped[id] ? 0.3 : opacity,
-      pointerEvents: isDropped[id] ? "none" : "auto",
+        ...styles[id],
       display,
-    };
-    
+    }; 
 
     return connectDragSource(
       <div className="item" style={style}>
