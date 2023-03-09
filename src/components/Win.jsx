@@ -34,7 +34,6 @@ const Lose = () => {
       console.error(error);
     }
   };
-
   return (
     <>
       <div className="my">
