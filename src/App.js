@@ -147,8 +147,8 @@ class App extends Component {
       del.push(id);
       this.componentDidMount();
       return {
-        items: prevState.items.filter((item) => item.id != id),
-        // items: prevState.items.filter((item) => item.id == item.id), add this to show item even after drag end
+        // items: prevState.items.filter((item) => item.id != id),
+        items: prevState.items.filter((item) => item.id == item.id),
       };
     });
   };
