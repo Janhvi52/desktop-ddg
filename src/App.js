@@ -79,7 +79,7 @@ class App extends Component {
         alert("PICK ICE BOXES");
         this.setState({isLoaded: true});
       }
-    }, 2000);
+    },3000);
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
       if (images[number]) {
