@@ -93,6 +93,7 @@ class App extends Component {
         { id: 5, url: "images/bgorange.png" },
         { id: 6, name: "Garnishes", url: "/images/lemon.png" },
       ],
+      isLoaded: false,
     };
   }
   data = [
@@ -103,6 +104,12 @@ class App extends Component {
   ];
 
   componentDidMount() {
+    setTimeout(() => {
+      if (!this.state.isLoaded) {
+        alert('PICK ICE BOXES');
+        this.setState({ isLoaded: true });
+      }
+    }, 2000);
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
       console.log(number);
@@ -147,7 +154,20 @@ class App extends Component {
     this.setState((prevState) => {
       del.push(id);
       this.componentDidMount();
+      if(id===1){
+        setTimeout(() => {
+          alert('PICK WHISKY');
+        }, 2000);
+      }
+      if(id===2){
+        setTimeout(() => {
+          alert('PICK ANY ITEM FROM MIXERS');
+        }, 2000);
+      }
       if(id===3 || id === 4){
+        setTimeout(() => {
+          alert('PICK ANY ITEM FROM GARNISHES');
+        }, 2000);
             styles[3] =  {
               opacity: 0.3,
               pointerEvents: "none",
@@ -158,6 +178,9 @@ class App extends Component {
             }
       }
       if(id===5 || id === 6){
+        setTimeout(() => {
+          alert('SHAKE YOUR HIGHBALL DRINK');
+        }, 2000);
         styles[5] =  {
           opacity: 0.3,
           pointerEvents: "none",
