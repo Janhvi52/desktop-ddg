@@ -40,25 +40,14 @@ const images = {
   136: "images/image136.png",
   145: "images/image146.png",
   146: "images/image145.png",
-  156: "images/image156.png",
   235: "images/image235.png",
   236: "images/image236.png",
   245: "images/image245.png",
   246: "images/image246.png",
-  256: "images/image256.png",
-  356: "images/image356.png",
-  456: "images/image456.png",
   1235: "images/image1235.png",
   1236: "images/image1236.png",
   1245: "images/image1245.png",
   1246: "images/image1246.png",
-  1256: "images/image1256.png",
-  1356: "images/image1356.png",
-  1456: "images/image1456.png",
-  2356: "images/image2356.png",
-  2456: "images/image2456.png",
-  12356: "images/image12356.png",
-  12456: "images/image12456.png",
 };
 
 class App extends Component {
@@ -93,7 +82,6 @@ class App extends Component {
     }, 2000);
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
-      console.log(number);
       if (images[number]) {
         this.setState({image: images[number]}, () => {
           if (!localStorage.getItem("isKeySet")) {
