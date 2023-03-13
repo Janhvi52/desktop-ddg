@@ -1,22 +1,20 @@
 /* eslint-disable*/
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "./App.css";
 import Item from "./components/Item";
 import Target from "./components/Target";
 import header from "./assets/headerr.png";
 import image2 from "./assets/image2.png";
-import image1234 from "./assets/image1234.png";
-import image23456 from "./assets/image23456.png";
 import image123456 from "./assets/image123456.png";
 import TouchBackend from "react-dnd-touch-backend";
-import { DragDropContext } from "react-dnd";
+import {DragDropContext} from "react-dnd";
 
 const del = [];
-const styles = []
+const styles = [];
 
 const images = {
   1: "images/image1.png",
-  2:  image2,
+  2: image2,
   3: "images/image3.png",
   4: "images/image4.png",
   5: "images/image5.png",
@@ -30,54 +28,26 @@ const images = {
   24: "images/image24.png",
   25: "images/image25.png",
   26: "images/image26.png",
-  34: "images/image23.png",
   35: "images/image35.png",
   36: "images/image36.png",
   45: "images/image45.png",
   46: "images/image46.png",
-  56: "images/image56.png",
   123: "images/image123.png",
   125: "images/image125.png",
   124: "images/image124.png",
   126: "images/image126.png",
-  134: "images/image123.png",
   135: "images/image135.png",
   136: "images/image136.png",
   145: "images/image146.png",
   146: "images/image145.png",
-  156: "images/image156.png",
-  234: "images/image234.png",
   235: "images/image235.png",
   236: "images/image236.png",
   245: "images/image245.png",
   246: "images/image246.png",
-  256: "images/image256.png",
-  345: "images/image235.png",
-  346: "images/image236.png",
-  356: "images/image356.png",
-  456: "images/image456.png",
-  1234: image1234,
   1235: "images/image1235.png",
   1236: "images/image1236.png",
   1245: "images/image1245.png",
   1246: "images/image1246.png",
-  1256: "images/image1256.png",
-  1345: "images/image1235.png",
-  1346: "images/image1236.png",
-  1356: "images/image1356.png",
-  1456: "images/image1456.png",
-  2345: "images/image2345.png",
-  2346: "images/image2346.png",
-  2356: "images/image2356.png",
-  2456: "images/image2456.png",
-  3456: "images/image3456.png",
-  12345: "images/image12345.png",
-  12346: "images/image12346.png",
-  12356: "images/image12356.png",
-  12456: "images/image12456.png",
-  13456: "images/image12356.png",
-  23456: image23456,
-  123456: image123456,
 };
 
 class App extends Component {
@@ -86,41 +56,46 @@ class App extends Component {
     this.state = {
       image: "images/glass.png",
       items: [
-        { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
-        { id: 2, name: "Whisky", url: "/images/bgwhiskey.png" },
-        { id: 3, url: "/images/bgcola.png" },
-        { id: 4, name: "Mixers", url: "/images/bgsoda.png" },
-        { id: 5, url: "images/bgorange.png" },
-        { id: 6, name: "Garnishes", url: "/images/lemon.png" },
+        {id: 1, name: "Ice Cubes", url: "/images/icecube.png"},
+        {id: 2, name: "Whisky", url: "/images/bgwhiskey.png"},
+        {id: 3, url: "/images/bgcola.png"},
+        {id: 4, name: "Mixers", url: "/images/bgsoda.png"},
+        {id: 5, url: "images/bgorange.png"},
+        {id: 6, name: "Garnishes", url: "/images/lemon.png"},
       ],
+      isLoaded: false,
     };
   }
   data = [
-    { id: 1, name: "Ice Cubes", url: "/images/icecube.png" },
-    { id: 2, name: "Whisky", url: "/images/bgwhiskey.png" },
-    { id: 4, url: "/images/bgsoda.png" },
-    { id: 6, name: "Garnishes", url: "/images/lemon.png" },
+    {id: 1, name: "Ice Cubes", url: "/images/icecube.png"},
+    {id: 2, name: "Whisky", url: "/images/bgwhiskey.png"},
+    {id: 4, url: "/images/bgsoda.png"},
+    {id: 6, name: "Garnishes", url: "/images/lemon.png"},
   ];
 
   componentDidMount() {
+    setTimeout(() => {
+      if (!this.state.isLoaded) {
+        alert("PICK ICE BOXES");
+        this.setState({isLoaded: true});
+      }
+    },3000);
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
-      console.log(number);
       if (images[number]) {
-        this.setState({ image: images[number] }, () => {
+        this.setState({image: images[number]}, () => {
           if (!localStorage.getItem("isKeySet")) {
             localStorage.setItem("attempts", 3);
             localStorage.setItem("isKeySet", "true");
           }
         });
       } else {
-        this.setState({ image: image123456 });
+        this.setState({image: image123456});
       }
     } else {
-      this.setState({ image: "images/glass.png" });
+      this.setState({image: "images/glass.png"});
     }
   }
-  
 
   check = () => {
     var combo =
@@ -147,31 +122,41 @@ class App extends Component {
     this.setState((prevState) => {
       del.push(id);
       this.componentDidMount();
-      if(id===3 || id === 4){
-            styles[3] =  {
-              opacity: 0.3,
-              pointerEvents: "none",
-            }
-            styles[4] =  {
-              opacity: 0.3,
-              pointerEvents: "none",
-            }
+      if (id === 1) {
+        setTimeout(() => {
+          alert("PICK WHISKY");
+        }, 2000);
       }
-      if(id===5 || id === 6){
-        styles[5] =  {
-          opacity: 0.3,
-          pointerEvents: "none",
+      if (id === 2) {
+        setTimeout(() => {
+          alert("PICK ANY ITEM FROM MIXERS");
+        }, 2000);
+      }
+      if (id === 3 || id === 4) {
+        setTimeout(() => {
+          alert("PICK ANY ITEM FROM GARNISHES");
+        }, 2000);
+        if (id === 3) {
+          styles[3] = {opacity: 0.3, pointerEvents: "none"};
+          styles[4] = {opacity: 0.8, pointerEvents: "none"};
+        } else {
+          styles[3] = {opacity: 0.8, pointerEvents: "none"};
+          styles[4] = {opacity: 0.3, pointerEvents: "none"};
         }
-        styles[6] =  {
-          opacity: 0.3,
-          pointerEvents: "none",
+      }
+      if (del.length === 4) {
+        setTimeout(() => {
+          alert("SHAKE YOUR HIGHBALL DRINK");
+        }, 2000);
+        if (id === 5) {
+          styles[5] = {opacity: 0.3, pointerEvents: "none"};
+          styles[6] = {opacity: 0.8, pointerEvents: "none"};
+        } else {
+          styles[5] = {opacity: 0.8, pointerEvents: "none"};
+          styles[6] = {opacity: 0.3, pointerEvents: "none"};
         }
-  }
-      else{
-        styles[id] = {
-          opacity: 0.3,
-          pointerEvents: "none",
-        }
+      } else {
+        styles[id] = {opacity: 0.3, pointerEvents: "none"};
       }
       return {
         items: prevState.items.filter((item) => item.id == item.id),
@@ -186,7 +171,7 @@ class App extends Component {
           <div className="head-image">
             <img
               src={header}
-              style={{ display: "inline", width: "100vw", height: "100%" }}
+              style={{display: "inline", width: "100vw", height: "100%"}}
             ></img>
           </div>
         </header>
@@ -200,11 +185,11 @@ class App extends Component {
               <div className="item-container">
                 {this.state.items?.map((item, index) => (
                   <Item
-                    styles = {styles}
+                    styles={styles}
                     key={item.id}
                     item={item}
                     handleDrop={(id) => {
-                        this.deleteItem(id);
+                      this.deleteItem(id);
                     }}
                   />
                 ))}
@@ -217,4 +202,4 @@ class App extends Component {
   }
 }
 
-export default DragDropContext(TouchBackend({ enableMouseEvents: true }))(App);
+export default DragDropContext(TouchBackend({enableMouseEvents: true}))(App);
