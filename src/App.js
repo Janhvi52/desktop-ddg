@@ -136,27 +136,18 @@ class App extends Component {
         setTimeout(() => {
           alert("PICK ANY ITEM FROM GARNISHES");
         }, 2000);
-        if (id === 3) {
           styles[3] = {opacity: 0.3, pointerEvents: "none"};
-          styles[4] = {opacity: 0.8, pointerEvents: "none"};
-        } else {
-          styles[3] = {opacity: 0.8, pointerEvents: "none"};
           styles[4] = {opacity: 0.3, pointerEvents: "none"};
-        }
       }
       if (del.length === 4) {
         setTimeout(() => {
           alert("SHAKE YOUR HIGHBALL DRINK");
         }, 2000);
-        if (id === 5) {
-          styles[5] = {opacity: 0.3, pointerEvents: "none"};
-          styles[6] = {opacity: 0.8, pointerEvents: "none"};
-        } else {
-          styles[5] = {opacity: 0.8, pointerEvents: "none"};
-          styles[6] = {opacity: 0.3, pointerEvents: "none"};
-        }
-      } else {
-        styles[id] = {opacity: 0.3, pointerEvents: "none"};
+      }
+      styles[id] = {opacity: 0.3, pointerEvents: "none"};
+      if (id === 5 || id === 6) {
+        styles[5] = {opacity: 0.3, pointerEvents: "none"};
+        styles[6] = {opacity: 0.3, pointerEvents: "none"};
       }
       return {
         items: prevState.items.filter((item) => item.id == item.id),
