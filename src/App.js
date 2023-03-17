@@ -76,7 +76,7 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       if (!this.state.isLoaded) {
-        alert("PICK ICE BOXES");
+        alert("Please Add Ice cubes");
         this.setState({isLoaded: true});
       }
     },3000);
@@ -124,24 +124,24 @@ class App extends Component {
       this.componentDidMount();
       if (id === 1) {
         setTimeout(() => {
-          alert("PICK WHISKY");
+          alert("Now add 30ml RC American Pride Whiskey");
         }, 2000);
       }
       if (id === 2) {
         setTimeout(() => {
-          alert("PICK ANY ITEM FROM MIXERS");
+          alert("Add one correct mixer for your Highball: Soda or Cola");
         }, 2000);
       }
       if (id === 3 || id === 4) {
         setTimeout(() => {
-          alert("PICK ANY ITEM FROM GARNISHES");
+          alert("Add the correct garnish to complete your highball");
         }, 2000);
           styles[3] = {opacity: 0.3, pointerEvents: "none"};
           styles[4] = {opacity: 0.3, pointerEvents: "none"};
       }
       if (del.length === 4) {
         setTimeout(() => {
-          alert("SHAKE YOUR HIGHBALL DRINK");
+          alert("To complete your highball please Stir & Submit");
         }, 2000);
       }
       styles[id] = {opacity: 0.3, pointerEvents: "none"};
@@ -169,7 +169,7 @@ class App extends Component {
         <div className="first">
           <div className="first-one">
             <Target image={this.state.image} />
-            <button onClick={this.check}>SHAKE</button>
+            <button onClick={this.check}>Stir & Submit</button>
           </div>
           <div className="App-intro">
             <div className="app-container">
