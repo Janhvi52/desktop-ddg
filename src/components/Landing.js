@@ -61,9 +61,8 @@ const Landing = () => {
             <div>
               <input type="checkbox" required/></div>
               <div>
-              PLEASE CONFIRM IF YOU ARE ABOVE LEGAL 
-             <br></br>DRINKING AGE</div>
-          </div>
+              PLEASE CONFIRM IF YOU ARE ABOVE LEGAL <br></br> DRINKING AGE AND ACCEPT OUR TERMS AND <br></br> CONDITIONS </div>
+              </div>
           </div>
           <div className="enterButton">
             <input className="button-next" type="submit" value="ENTER"></input>
