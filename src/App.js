@@ -79,7 +79,7 @@ class App extends Component {
         alert("Please Add Ice cubes");
         this.setState({isLoaded: true});
       }
-    },3000);
+    },4000);
     if (del.length > 0) {
       const number = parseInt(del.sort().join(""));
       if (images[number]) {
@@ -125,24 +125,24 @@ class App extends Component {
       if (id === 1) {
         setTimeout(() => {
           alert("Now add 30ml RC American Pride Whiskey");
-        }, 2000);
+        }, 3000);
       }
       if (id === 2) {
         setTimeout(() => {
           alert("Add one correct mixer for your Highball: Soda or Cola");
-        }, 2000);
+        }, 3000);
       }
       if (id === 3 || id === 4) {
         setTimeout(() => {
           alert("Add the correct garnish to complete your highball");
-        }, 2000);
+        }, 3000);
           styles[3] = {opacity: 0.3, pointerEvents: "none"};
           styles[4] = {opacity: 0.3, pointerEvents: "none"};
       }
       if (del.length === 4) {
         setTimeout(() => {
           alert("To complete your highball please Stir & Submit");
-        }, 2000);
+        }, 3000);
       }
       styles[id] = {opacity: 0.3, pointerEvents: "none"};
       if (id === 5 || id === 6) {
