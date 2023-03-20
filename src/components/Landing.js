@@ -60,8 +60,10 @@ const Landing = () => {
           <div className="pleaseConfirm">
             <div>
               <input type="checkbox" required/></div>
-              <div>
-              PLEASE CONFIRM IF YOU ARE ABOVE LEGAL <br></br> DRINKING AGE AND ACCEPT OUR TERMS AND <br></br> CONDITIONS </div>
+              <div className="flex" style={{textAlign:"center"}}>
+              <div>PLEASE CONFIRM IF YOU ARE ABOVE LEGAL DRINKING</div>
+              <div>AGE AND ACCEPT OUR <a className="termsAndCondition" href="#">TERMS AND CONDITIONS</a></div>
+              </div>
               </div>
           </div>
           <div className="enterButton">
