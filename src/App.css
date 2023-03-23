@@ -40,7 +40,8 @@ body {
   font-size: 15px;
   border: 1px solid #9c102a;
   box-shadow: 0 0 0 2px #ece7e8, 0 0 0 4px #9c102a;
-  margin: 5%;
+  /* margin: 5%; */
+  
 }
 .App-title {
   font-size: 1.5em;
