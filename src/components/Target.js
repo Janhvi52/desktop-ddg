@@ -14,7 +14,7 @@ class Target extends Component {
     const {connectDropTarget, image} = this.props;
     return connectDropTarget(
       <div className="target">
-        <img src={image} alt="glass" style={{ width: "110%", height:"500px", overflow:"hidden" }}></img>
+        <img src={image} alt="glass" style={{ width: "110%", height:"500px", overflow:"hidden", marginLeft:"10px" }}></img>
       </div>
     );
   }
